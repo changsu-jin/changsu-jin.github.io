@@ -93,9 +93,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "changsu.jin"
-  avatar           : "/assets/img/profile/profile2.jpg"
-  bio              : "그림 그렸었던 개발자"
+  name             : # "changsu.jin"
+  avatar           : # "/assets/img/profile/profile2.jpg"
+  bio              : # "그림 그렸었던 개발자"
   location         : "Seoul, Korea"
   email            :
   links:
