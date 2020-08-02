@@ -4,6 +4,12 @@
 
 포스팅 환경세팅
 
+wsl ssh 서버구축과정
+
+프라이빗 도커레지스트리 구축과정
+
+
+
 
 
 https://devinlife.com/howto/   jekyll 블로그
