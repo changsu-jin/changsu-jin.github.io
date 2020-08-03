@@ -191,6 +191,16 @@ org.eclipse.jdt.core.compiler.problem.unusedWarningToken=warning
 org.eclipse.jdt.core.compiler.problem.varargsArgumentNeedCast=warning
 ```
 
+- 접속된 remote별로 theme 설정 (설정에서 조회해서 들어가야 사용가능한 theme을 볼 수 있음)
+
+```properties
+{
+    "workbench.colorTheme": "<your theme of choice>"
+}
+```
+
+
+
 ### GRADLE
 
 - 디펜던시 리로드
