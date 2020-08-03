@@ -14,11 +14,10 @@ defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-ty
 
 ### NVM
 
-[nvm 과 npm 구별하기](https://lynmp.com/ko/article/tb585d114096490055)
+- [nvm 과 npm 구별하기](https://lynmp.com/ko/article/tb585d114096490055)
+- [NVM으로 노드 버전 관리하기](http://jeonghwan-kim.github.io/2016/08/10/nvm.html) 
+- .zshrc 참고
 
-[NVM으로 노드 버전 관리하기](http://jeonghwan-kim.github.io/2016/08/10/nvm.html)
-
-.zshrc 참고
 
 ```shell
 export NVM_DIR="$HOME/.nvm"
@@ -28,13 +27,15 @@ export NVM_DIR="$HOME/.nvm"
 
 ### SDKMAN
 
+- 설치
+
 ```shell
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 8.0.252.hs-adpt
 ```
 
-.zshrc 참고
+- .zshrc 참고
 
 ```shell
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
@@ -44,11 +45,11 @@ export SDKMAN_DIR="/Users/purple/.sdkman"
 
 ### TMUX
 
-[우분투(Ubuntu)에 tmux 설치/세팅하기](https://seongkyun.github.io/others/2019/01/05/tmux/)
+- [우분투(Ubuntu)에 tmux 설치/세팅하기](https://seongkyun.github.io/others/2019/01/05/tmux/)
 
 ### GIT
 
-git 작업내용 되돌리기
+- git 작업내용 되돌리기
 
 ```shell
 git clean -f
@@ -56,23 +57,29 @@ git reset --hard
 git stash -u
 ```
 
+- Git remote repository에 push를 할 때 커밋 히스토리에 Merge branch 'master' of http://.... 가 생기는 경우에 대해서 문의가 있어서 남깁니다.
+
+  [GitHub Merge branch 'master'](http://stackoverflow.com/questions/7120199/github-merge-branch-master)
+
+  두개의 브랜치 A와 B가 동일한 상태에서 A가 push를 하고 B가 remote repository sync없이 다른 작업을 push하는 경우 reject가 나고, 이때 pull을 받는 과정에서 remote의 commit이 merge가 되는데 이 merge건에 대한 commit history입니다.
+
 ### VSCODE
 
-항상 새탭으로 열리게
+- 항상 새탭으로 열리게
 
 ```properties
 workbench.editor.enablePreview
 ```
 
-Language Support for Java (서버 크래쉬 나는 경우) setting.json에 java.jdt.ls.vmargs값에 -DwatchParentProcess=false 추가
+- Language Support for Java (서버 크래쉬 나는 경우) setting.json에 java.jdt.ls.vmargs값에 -DwatchParentProcess=false 추가
 
 ```properties
 "java.jdt.ls.vmargs": "-DwatchParentProcess=false -Dlog.level=ALL -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m",
 ```
 
-다중행 커서를 마지막으로 : shift+alt+i
+- 다중행 커서를 마지막으로 : shift+alt+i
 
-JAVA 컴파일러 옵션
+- JAVA 컴파일러 옵션
 
 ```properties
 org.eclipse.jdt.core.compiler.annotation.inheritNullAnnotations=disabled
@@ -186,17 +193,13 @@ org.eclipse.jdt.core.compiler.problem.varargsArgumentNeedCast=warning
 
 ### GRADLE
 
-디펜던시 리로드
+- 디펜던시 리로드
 
 ```shell
 ./gradlew --refresh-dependencies --info
 ```
 
-
-
-
-****
-리퀴베이스(변경로그 추출 / 체크섬 클리어 / 롤백)
+- 리퀴베이스(변경로그 추출 / 체크섬 클리어 / 롤백)
 
 ```shell
 ./gradlew bootjar -x test  ## 패키지화
@@ -209,7 +212,7 @@ org.eclipse.jdt.core.compiler.problem.varargsArgumentNeedCast=warning
 
 ### NPM
 
-project install 오류 시
+- project install 오류 시
 
 ```shell
 npm cache clean -f
@@ -217,13 +220,13 @@ rm -rf node_modules/
 rm package-lock.json
 ```
 
-프록시 세팅
+- 프록시 세팅
 
 ```shell
 npm config set https-proxy http://211.251.239.13:8118
 ```
 
-node_module/.bin 심볼릭링크 문제
+- node_module/.bin 심볼릭링크 문제
 
 ```shell
 npm install --no-bin-links
@@ -231,7 +234,7 @@ npm install --no-bin-links
 
 ### DOCKER
 
-설치
+- 설치
 
 ```shell
 https://docs.docker.com/docker-for-windows/install/curl -fsSL https://get.docker.com/ | sudo sh
@@ -242,14 +245,14 @@ export DOCKER_HOST=tcp://127.0.0.1:2375
 
 ###  WSL
 
-시작/중지 (in powershell)
+- 시작/중지 (in powershell)
 
 ```powershell
 net stop LxssManager
 net start LxssManager
 ```
 
-Mount root 변경(wsl1)
+- Mount root 변경(wsl1)
 
 ```shell
 $ sudo nano /etc/wsl.conf
@@ -261,15 +264,63 @@ root = /
 options = "metadata"
 ```
 
+- DOCKER FOR WINDOWS + WSL(WINDOWS SUBSYSTEM LINUX) 볼륨설정 관련
+  - Docker for Windows+WSL 에서 Volumn 마운트 경로는 wsl에서 /c, /d 로 시작되는 경로만 가능하다.
+  - WSL은 경로구성이 /mnt/c, /mnt/d 로 기본으로 잡혀 있으며, 해당경로는 도커에서 인지하지 못한다.
+  - 도커에서 WSL경로를 볼륨으로 잡기 위해선, wsl.conf 파일을 생성하여 wsl mount경로를 바인딩해주어야 한다.(/mnt/c -> /c) 
+    (윈도우 빌드버전 18.03 이상인 경우, 이하 버전은 wsl에서 mount명령어로 직접 바인딩 후 ~/.bashrc 파일에 설정해줘야 함)
+  - Docker for Windows -> Resources -> FILE SHARING메뉴에서 C 체크해줘야 함
+
+- WSL HOST의TIMEZONE 파일을 VOLUME으로 잡고, 도커컨테이너에서 HOST와 TIMEZONE 싱크하는 예제
+
+```shell
+[WSL console]
+cp /etc/timezone /c/volumn/timezone (심볼릭링크는 못찾더군요..)
+
+[Docker compose  : mysql.yml]
+....
+volumes:
+\- "/c/volumn/timezone:/etc/timezone:ro"  
+environment:
+\- TZ=Asia/Seoul
+....
+
+[WSL console]
+docker-compose -f mysql.yml up -d
+docker exec -it <컨테이너ID> /bin/bash
+
+[Docker container]
+date   ==> host의 시간과 일치하는 지 확인
+cat /etc/timezone ==> host의 타임존과 일치하는 지 확인
+
+```
+
+```mysql
+[Docker container : mysql console]
+mysql -u root
+select now();
+SELECT @@GLOBAL.time_zone, @@SESSION.time_zone, @@system_time_zone;
+```
+
+  
+
+- 참고링크
+  - https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#ensure-volume-mounts-work
+  - https://stackoverflow.com/questions/59942110/docker-drive-has-not-been-shared
+
+
+
+
+
 ### JHipster
 
-최초생성
+- 최초생성
 
 ```shell
 jhipster --skip-cache --skip-install --skip-git --jhi-prefix=csj
 ```
 
-prefix변경(regenerator-소스코드에서 변경한 경우)
+- prefix변경(regenerator-소스코드에서 변경한 경우)
 
 ```shell
  jhipster --with-entities --skip-install
@@ -277,8 +328,7 @@ prefix변경(regenerator-소스코드에서 변경한 경우)
 
 ### KU8
 
-minikube
-
+- minikube
 ```shell
 sudo apt-get install -y conntrack
 sudo -E minikube start --vm-driver=none --extra-config=kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
@@ -288,7 +338,7 @@ sudo -E minikube start --vm-driver=none --extra-config=kubelet.resolv-conf=/run/
 
 ### MS Terminal
 
-https://docs.microsoft.com/ko-kr/windows/terminal/panes
+- https://docs.microsoft.com/ko-kr/windows/terminal/panes
 
 
 
