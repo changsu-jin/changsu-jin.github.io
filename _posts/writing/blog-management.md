@@ -1,3 +1,7 @@
+```shell
+bundle exec jekyll serve
+```
+
 ### 글감
 
 - wsl ssh 서버구축과정
