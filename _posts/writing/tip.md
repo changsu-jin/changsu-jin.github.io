@@ -350,6 +350,39 @@ sudo -E minikube start --vm-driver=none --extra-config=kubelet.resolv-conf=/run/
 
 - https://docs.microsoft.com/ko-kr/windows/terminal/panes
 
+### Ruby
+
+- 설치
+
+```shell
+sudo apt install ruby-full build-essential zlib1g-dev
+```
+
+- sudo 없이 gem 쓰기 위해 gem 패키지가 생성될 폴더 만들기
+
+```shell
+mkdir .gems
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/.gems"
+export PATH="$HOME/.gems/bin:$PATH"
+```
+
+- Jekyll과 Bundler 설치
+
+```shell
+gem install jekyll bundler
+```
+
+- Theme에 따른 의존성 설치
+
+```shell
+bundle install
+```
+
+
+
+
+
 
 
 

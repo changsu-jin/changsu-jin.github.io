@@ -1,5 +1,5 @@
 ---
-published : false
+published : true
 title:  "수인이와 첫 collaboration"
 categories:
   - doodle
