@@ -12,7 +12,7 @@ last_modified_at: 2019-04-13T08:06:00-05:00
 typora-root-url: ../
 ---
 
-![](https://i.imgur.com/NMwVYyE.jpg)
+![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ghf5bdzy4aj318g0rs752.jpg)
 
 도커 성능 테스트라고는 하지만 각 개발환경 호스트의 파일시스템에 따른 도커볼륨 I/O 속도 테스트 인 것 같다.
 
