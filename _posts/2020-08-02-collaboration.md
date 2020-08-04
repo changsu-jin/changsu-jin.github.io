@@ -13,18 +13,18 @@ typora-root-url: ../
 
 
 
-![](/assets/img/2020-08-02-collabolation-post.md/20170924_131444.jpg)
+![](https://i.imgur.com/gRlqbd6.jpg)
 
 
 
 
 
-![](/assets/img/2020-08-02-collabolation-post.md/20170924_125541.jpg)
+![](https://i.imgur.com/3JGOdQB.jpg)
 
 수줍어하는 진수인(6세) 화백
 
 
 
-![](/assets/img/2020-08-02-collabolation-post.md/20170924_125630.jpg)
+![](https://i.imgur.com/iKIxeoJ.jpg)
 
 수줍어하는 진수인(6세) 화백2

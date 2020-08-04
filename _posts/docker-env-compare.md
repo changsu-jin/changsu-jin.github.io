@@ -12,7 +12,7 @@ last_modified_at: 2019-04-13T08:06:00-05:00
 typora-root-url: ../
 ---
 
-![](/assets/img/2020-08-01-first-post/docker-black.jpg)
+![](https://i.imgur.com/NMwVYyE.jpg)
 
 도커 성능 테스트라고는 하지만 각 개발환경 호스트의 파일시스템에 따른 도커볼륨 I/O 속도 테스트 인 것 같다.
 
@@ -52,9 +52,9 @@ YFM에서 정의한 제목을 이중 괄호 구문으로 본문에 추가할 수
 
 # Mac OS + Docker Desktop for Mac(edge)
 
-![](/assets/img/2020-08-01-first-post/Screen%20Shot%202020-08-02%20at%201.40.36%20PM.png)
+![](https://i.imgur.com/MgxpQbQ.png)
 
-![](/assets/img/2020-08-01-first-post/Screen%20Shot%202020-08-02%20at%201.42.25%20PM.png)
+![](https://i.imgur.com/nF9Aalx.png)
 
 
 
