@@ -387,7 +387,7 @@ bundle install
 show engines;
 ```
 
-![before](https://raw.githubusercontent.com/changsu-jin/changsu-jin.github.io/master/assets/img/db-before.png?token=ALGZEP24UJWHONHXHJ7ZQR27FFBEY)
+![before](https://i.imgur.com/lBJf7Bz.png)
 
 - /etc/mysql/my.cnf 에 FEDERATED Engine 사용등록
 
@@ -410,7 +410,7 @@ service mysql restart;
 show engines;
 ```
 
-![after](https://raw.githubusercontent.com/changsu-jin/changsu-jin.github.io/master/assets/img/db-after.png?token=ALGZEP3VSHKKBHVA3YXBNYK7GJ6U6)
+![after](https://i.imgur.com/gyPa2G8.png)
 
 - FEDERATED Engine을 이용해서 연결대상 DB의 테이블과 동일한 테이블 생성해서 연결
 
