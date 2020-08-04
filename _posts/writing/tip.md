@@ -379,19 +379,49 @@ gem install jekyll bundler
 bundle install
 ```
 
+### MySQL
 
+- FEDERATED Engine을 이용한 DB 링크 구현
 
+```mysql
+show engines;
+```
 
+![before](https://raw.githubusercontent.com/changsu-jin/changsu-jin.github.io/master/assets/img/db-before.png?token=ALGZEP24UJWHONHXHJ7ZQR27FFBEY)
 
+- /etc/mysql/my.cnf 에 FEDERATED Engine 사용등록
 
+```bash
+vi /etc/mysql/my.cnf
+--------------------------------------------------
+[mysqld]
+federated
+```
 
+- MySQL 재시작
 
+```bash
+service mysql restart;
+```
 
+- FEDERATED Engine 활성화 확인
 
+```mysql
+show engines;
+```
 
+![after](https://raw.githubusercontent.com/changsu-jin/changsu-jin.github.io/master/assets/img/db-after.png?token=ALGZEP3VSHKKBHVA3YXBNYK7GJ6U6)
 
+- FEDERATED Engine을 이용해서 연결대상 DB의 테이블과 동일한 테이블 생성해서 연결
 
-
-
-
+~~~mysql
+CREATE TABLE mig.product (
+  `product_code` varchar(255) NOT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
+  `brand_code` varchar(100) DEFAULT NULL,
+  `product_type` varchar(100) DEFAULT NULL
+) ENGINE=FEDERATED DEFAULT CHARSET=utf8
+CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-northeast-2.rds.amazonaws.com:3306/mig/product'
+;
+~~~
 
