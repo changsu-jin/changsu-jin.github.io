@@ -122,3 +122,6 @@ saleIdGenerator = Registry.getApplicationContext().getBean("kopSaleIdKeyGenerato
 return saleIdGenerator;}
 @Overridepublic Object importValue(String valueExpr, Item toItem) throws JaloInvalidParameterException {return (valueExpr != null && valueExpr.length() > 0) ? valueExpr : getSaleIdGenerator().generate();}
 @Overridepublic String exportValue(Object value) throws JaloInvalidParameterException {return value == null ? null : value.toString();}}AbstractValueTranslator를 확장하고 importValue와 exportValue를 구현하면 됩니다. importValue는 impex import시에 exportValue는 impex export시에 호출이 됩니다. 위에 구현은 impex에 valueExpr이 있을때는 그 데이터를 사용하고 없으면 keyGenerator를 호출해서 데이터를 넣을 수 있도록 만든  Translator입니다.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTIyMjMyNDY0OF19
+-->
