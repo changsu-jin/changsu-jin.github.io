@@ -33,7 +33,8 @@
 
 # 소재
 ## 도시일러스트
-[도시,푸](https://www.pinterest.co.kr/pin/550142910724626800/)
+[도시풍경을 그리다.](https://www.pinterest.co.kr/pin/550142910724626800/)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDg2NjQ3MjddfQ==
+eyJoaXN0b3J5IjpbMTg2ODA4OTQwMV19
 -->
