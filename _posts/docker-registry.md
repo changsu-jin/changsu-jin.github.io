@@ -14,8 +14,8 @@ ex) docker push 172.18.124.149:5000/devbox-wms-web:1
 ※ private registry에 등록된 이미지 목록 조회
 curl -X GET http://172.18.124.149:5000/v2/_catalog
 
-※ 이미지별 태그 확인
+※ 이미지별 태그 확인  
 curl -X GET http://172.18.124.149:5000/v2/redis/tags/list
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTY5ODkxMTRdfQ==
+eyJoaXN0b3J5IjpbNDczODA2MDIyXX0=
 -->
