@@ -16,3 +16,6 @@ curl -X GET http://172.18.124.149:5000/v2/_catalog
 
 ※ 이미지별 태그 확인
 curl -X GET http://172.18.124.149:5000/v2/redis/tags/list
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyOTY5ODkxMTRdfQ==
+-->
