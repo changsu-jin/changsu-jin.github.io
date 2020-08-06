@@ -425,3 +425,9 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 ;
 ~~~
 
+## SPRING JPA
+
+### Supported keywords inside method names
+
+![](https://raw.githubusercontent.com/changsu-jin/image/master/assets/img/springjpa.png)
+
