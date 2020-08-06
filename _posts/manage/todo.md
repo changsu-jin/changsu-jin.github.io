@@ -12,7 +12,7 @@ bundle exec jekyll serve
 - 프라이빗 도커레지스트리 구축
 - 도커 환경 성능 비교
 - **serverless 배포정리**
-
+- [kotlin](https://kolonfnc.m.workplace.com/groups/1502457096583139?view=permalink&id=1606720919490089)
 ### 할일
 
 - notion사용영역이 애매해짐에 따라 홍보용 페이지로 활용 방안 구상
@@ -20,6 +20,6 @@ bundle exec jekyll serve
 - 바쁜 거 정리되면 언제 어디서나 드로잉 할 수 있도록 장비 준비
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTY5MzA2MzEsLTYwMDUxNjY5OV19
+eyJoaXN0b3J5IjpbNjE2MTM3MDQyLC0xNzU2OTMwNjMxLC02MD
+A1MTY2OTldfQ==
 -->
-
