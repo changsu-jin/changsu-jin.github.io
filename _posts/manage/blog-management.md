@@ -1,3 +1,6 @@
+> 평소에 빠른 작업은 StackEdit 공들여 Post작성할 때는 Typora
+> StackEdit 
+
 ```shell
 bundle exec jekyll serve
 ```
@@ -17,5 +20,5 @@ bundle exec jekyll serve
 - 도메인따기
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDk0NDkzNTZdfQ==
+eyJoaXN0b3J5IjpbMTM0NjA1ODQ3N119
 -->
