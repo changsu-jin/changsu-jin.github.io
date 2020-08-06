@@ -14,7 +14,7 @@ bundle exec jekyll serve
 - **serverless 배포정리**
 - [kotlin](https://kolonfnc.m.workplace.com/groups/1502457096583139?view=permalink&id=1606720919490089)
 - https://kolonfnc.m.workplace.com/groups/1502457096583139?view=permalink&id=1606721776156670
-- 
+- [sonarcube](https://kolonfnc.m.workplace.com/groups/1502457096583139?view=permalink&id=1606724819489699)
 ### 할일
 
 - notion사용영역이 애매해짐에 따라 홍보용 페이지로 활용 방안 구상
@@ -22,6 +22,6 @@ bundle exec jekyll serve
 - 바쁜 거 정리되면 언제 어디서나 드로잉 할 수 있도록 장비 준비
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNTY3NjQ1NSwtMTc1NjkzMDYzMSwtNj
+eyJoaXN0b3J5IjpbMTIzMjM3OTE3OCwtMTc1NjkzMDYzMSwtNj
 AwNTE2Njk5XX0=
 -->
