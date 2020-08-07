@@ -251,8 +251,11 @@ bundle install
 
 ### N+1튜닝
 JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우의 수를 모두 캐싱합니다.
-데이터가 1개 들어올 때 : where xxx in  
-
+데이터가 1개 들어올 때 : where xxx in (?)
+데이터가 2개 들어올 때 : where xxx in (?,?) 
+데이터가 n개 들어올 때 : where xxx in (?,?, ...) 
+이렇게 캐시하는 경우 데이터가 많아지면 너무 많은 케이스를 캐싱해야 하고 성능에 문제가 발생하므로 
+하이버네이트는 최적화를 위해 캐싱케이스를 
 
 
 ## IDE Tool
@@ -445,5 +448,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEzMDk0MDMsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbLTEzOTM4OTk5NjUsLTgyMDYzNDgzNF19
 -->
