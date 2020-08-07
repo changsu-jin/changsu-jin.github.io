@@ -352,6 +352,7 @@ workbench.editor.enablePreview
 ```
 
 - 다중행 커서를 마지막으로 : shift+alt+i
+- 같은 키워드 한번에 선택 : Ctrl + Shift + L
 
 - JAVA 컴파일러 옵션
 
@@ -525,5 +526,6 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTM4NzMwMzAsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbLTEwNTY2OTkxMTQsLTEwMTM4NzMwMzAsLT
+gyMDYzNDgzNF19
 -->
