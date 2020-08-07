@@ -254,8 +254,11 @@ JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 �
 데이터가 1개 들어올 때 : where xxx in (?)
 데이터가 2개 들어올 때 : where xxx in (?,?) 
 데이터가 n개 들어올 때 : where xxx in (?,?, ...) 
+
 이렇게 캐시하는 경우 데이터가 많아지면 너무 많은 케이스를 캐싱해야 하고 성능에 문제가 발생하므로 
-하이버네이트는 최적화를 위해 캐싱케이스를 
+하이버네이트는 최적화를 위해 자체 알고리즘으로 캐싱케이스를 줄입니다.
+줄이는 방식은  프로젝트에 선언 된 기본배치사이즈(hibernate.default_batch_fetch_size:  100)를 기준으로 
+절반씩 나눠가면서 캐싱합니다.
 
 
 ## IDE Tool
@@ -448,5 +451,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTM4OTk5NjUsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbMTg0MDI0NzgwNywtODIwNjM0ODM0XX0=
 -->
