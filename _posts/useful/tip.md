@@ -258,7 +258,10 @@ JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 �
 이렇게 캐시하는 경우 데이터가 많아지면 너무 많은 케이스를 캐싱해야 하고 성능에 문제가 발생하므로 하이버네이트는 최적화를 위해 캐싱케이스를 줄입니다.
 
 줄이는 방식은  프로젝트에 선언 된 기본배치사이즈(hibernate.default_batch_fetch_size:  100)를 기준으로 절반씩 나눠가면서 캐싱합니다.
-그리고 자주사용할 것으로 예상되는 1~10 사이는 모두 캐싱 하게되며, 기준값을 100으로 잡았을 때, 기존 preparedstatement 방식에 의하면 총 100개의 케이스를 캐싱해두개 되지만, 하이버네이트의 방식으로 하게 되면 14개로 줄어듭니다.(1,2,3,4,5,6,7,8,9,
+그리고 자주사용할 것으로 예상되는 1~10 사이는 모두 캐싱 하게되며, 기준값을 100으로 잡았을 때, 기존 preparedstatement 방식에 의하면 총 100개의 케이스를 캐싱해두개 되지만, 하이버네이트의 방식으로 하게 되면 14개로 줄어듭니다.(1,2,3,4,5,6,7,8,9,10,12, 25,50,100)
+
+hibernate.default_batch_fetch_size:  100 으로 잡은 환경에서 N+1 이ㅅ
+
 
 
 ## IDE Tool
@@ -451,5 +454,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTY2MzE5OTMsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbMjIzMjk1NzYyLC04MjA2MzQ4MzRdfQ==
 -->
