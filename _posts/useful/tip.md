@@ -264,7 +264,7 @@ preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우를
 그리고 자주사용할 것으로 예상되는 1~10 사이는 모두 캐싱 하게되며, 기준값을 100으로 잡았을 때, 기존 preparedstatement 방식에 의하면 총 100개의 케이스를 캐싱해두게 되지만, 하이버네이트의 방식으로 하게 되면 14개로 줄어듭니다.(1,2,3,4,5,6,7,8,9,10,12, 25,50,100)
 
 N+1이슈가 발생한 쿼리가 있고 총 데이터가 83건이면 83번의 동일한 쿼리가 나가는 상황일겁니다.
-이 현상의 튜닝을 위해 hibernate.default_batch_fetch_size:  100 으로 잡고 데이터를 조회하면, 쿼리가 한번 나가고 in절 항목이 83개가 들어가게 될 것으로 예상되지만 실제로는 아래와 같이 총 3번의 동일한 쿼리가 나가게 됩니다. 
+이 현상의 튜닝을 위해 hibernate.default_batch_fetch_size:  100 으로 잡고 데이터를 조회하면, 쿼리가 한번 나가고 in절 항목이 83개가 들어가게 될 것으로 예상되지만 실제로는 캐싱된 케이스에 의해 아래와 같이 총 3번의 동일한 쿼리가 나가게 됩니다. 
 
 - in절 항목이 50으로 캐싱된 쿼리 한 번
 - in절 항목이 25로 캐싱된 쿼리 한 번
@@ -525,5 +525,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNjQ4NDIwNywtODIwNjM0ODM0XX0=
+eyJoaXN0b3J5IjpbLTEwMTM4NzMwMzAsLTgyMDYzNDgzNF19
 -->
