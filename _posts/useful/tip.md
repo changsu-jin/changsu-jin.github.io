@@ -262,13 +262,13 @@ JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 �
 
 
 N+1이슈가 발생한 쿼리가 있고 총 데이터가 83건이면 83번의 동일한 쿼리가 나가는 상황일겁니다.
-이 현상의 튜닝을 위해 hibernate.default_batch_fetch_size:  100 으로 잡고 데이터를 조회하면, 한 번의 쿼리에 in절 항목이 83개가 들어가게 될 것으로 예상되지만 실제로는 총 3번의 동일한 쿼리가 나가게 됩니다. 
+이 현상의 튜닝을 위해 hibernate.default_batch_fetch_size:  100 으로 잡고 데이터를 조회하면, 쿼리가 한번 나가고 in절 항목이 83개가 들어가게 될 것으로 예상되지만 실제로는 아래와 같이 총 3번의 동일한 쿼리가 나가게 됩니다. 
 
-- in절 항목이 50으로 캐싱된 쿼리 한번
-- in절 항목이 25로 캐싱된 쿼리 한번
-- in절 항목이 8으로 캐싱된 쿼리 한번 
+- in절 항목이 50으로 캐싱된 쿼리 한 번
+- in절 항목이 25로 캐싱된 쿼리 한 번
+- in절 항목이 8으로 캐싱된 쿼리 한 번 
 
-이는 하이버네이트 최적화 전략에 의해, 정상적인 부분이니
+이는 하이버네이트 최적화 전략에 의해, 정상적인 부분이며
 
 
 
@@ -463,5 +463,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTQxMjY3ODgsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbLTEzMTEzNDYzMTMsLTgyMDYzNDgzNF19
 -->
