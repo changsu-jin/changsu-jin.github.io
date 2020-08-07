@@ -250,7 +250,7 @@ bundle install
 ![](https://raw.githubusercontent.com/changsu-jin/image/master/assets/img/springjpa.png)
 
 
-###  JPA N+1튜닝과정에서 선언한 배치 사이즈와 다르게 쿼리 분할 되어 수행되는 현상 
+###  JPA N+1튜닝과정에서 선언한 배치 사이즈와 다르게 쿼리 분할 되어 수행되는 현상공유
 
 먼저 이 현상을 설명하려면 JDBC의 preparedstatement의 캐싱 방식을 알아야 합니다.
 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우의 수를 모두 캐싱합니다.
@@ -518,5 +518,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjU4NTkyMTIsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbLTEwOTAxODM0NjMsLTgyMDYzNDgzNF19
 -->
