@@ -249,6 +249,11 @@ bundle install
 
 ![](https://raw.githubusercontent.com/changsu-jin/image/master/assets/img/springjpa.png)
 
+### N+1튜닝
+JDBC의 preparedstatement는  
+
+
+
 ## IDE Tool
 
 ### VSCODE
@@ -439,5 +444,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbLTExOTQxMDIwNTcsLTgyMDYzNDgzNF19
 -->
