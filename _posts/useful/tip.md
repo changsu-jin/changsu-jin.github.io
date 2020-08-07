@@ -325,7 +325,14 @@ N+1이슈가 발생한 쿼리가 있고 총 데이터가 83건이면 83번의 �
 이는 하이버네이트 최적화 전략에 의해, 정상적인 부분이며 권장하는 기본전략입니다.
 참고로, 선언한(hibernate.default_batch_fetch_size:  100 ) 사이즈 만큼 in절 항목을 발생시키고 싶다면 설정파일에 ```hibernate.batch_fetch_style: dynamic ```을 추가하시면 됩니다.(캐싱되지 않은 케이스로 쿼리가 수행되므로 권장하지 않는 방식이라고 합니다.)
 
+```
+	spring.jpa.properties.hibernate.batch_fetch_style: legacy //기본
 
+	spring.jpa.properties.hibernate.batch_fetch_style: padded
+
+	spring.jpa.properties.hibernate.batch_fetch_style: dynamic //최적화X
+```
+[참조](https://docs.jboss.org/hibernate/orm/4.2/manual/en-US/html/ch20.html#performance-fetching-batch)
 
 
 ## IDE Tool
@@ -518,5 +525,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDg0MTIyNTksLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbLTQxNjQ4NDIwNywtODIwNjM0ODM0XX0=
 -->
