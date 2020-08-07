@@ -249,8 +249,9 @@ bundle install
 
 ![](https://raw.githubusercontent.com/changsu-jin/image/master/assets/img/springjpa.png)
 
-###  N+1튜닝
-JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우의 수를 모두 캐싱합니다.
+###  JPA N+1튜닝과정에서 선언한 배치 사이즈와 다르게 쿼리 분할 되어 수행되는 현상 
+
+먼저 JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우의 수를 모두 캐싱합니다.
 데이터가 1개 들어올 때 : where xxx in (?)
 데이터가 2개 들어올 때 : where xxx in (?,?) 
 데이터가 n개 들어올 때 : where xxx in (?,?, ...) 
@@ -259,7 +260,6 @@ JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 �
 
 줄이는 방식은  프로젝트에 선언 된 기본배치사이즈(hibernate.default_batch_fetch_size:  100)를 기준으로 절반씩 나눠가면서 캐싱합니다.
 그리고 자주사용할 것으로 예상되는 1~10 사이는 모두 캐싱 하게되며, 기준값을 100으로 잡았을 때, 기존 preparedstatement 방식에 의하면 총 100개의 케이스를 캐싱해두게 되지만, 하이버네이트의 방식으로 하게 되면 14개로 줄어듭니다.(1,2,3,4,5,6,7,8,9,10,12, 25,50,100)
-
 
 N+1이슈가 발생한 쿼리가 있고 총 데이터가 83건이면 83번의 동일한 쿼리가 나가는 상황일겁니다.
 이 현상의 튜닝을 위해 hibernate.default_batch_fetch_size:  100 으로 잡고 데이터를 조회하면, 쿼리가 한번 나가고 in절 항목이 83개가 들어가게 될 것으로 예상되지만 실제로는 아래와 같이 총 3번의 동일한 쿼리가 나가게 됩니다. 
@@ -464,5 +464,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MDcwMjU0OCwtODIwNjM0ODM0XX0=
+eyJoaXN0b3J5IjpbLTIwMTA1MzE1NDIsLTgyMDYzNDgzNF19
 -->
