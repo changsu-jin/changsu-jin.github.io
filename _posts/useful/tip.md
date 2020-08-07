@@ -249,10 +249,11 @@ bundle install
 
 ![](https://raw.githubusercontent.com/changsu-jin/image/master/assets/img/springjpa.png)
 
+
 ###  JPA N+1튜닝과정에서 선언한 배치 사이즈와 다르게 쿼리 분할 되어 수행되는 현상 
 
-먼저 JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우의 수를 모두 캐싱합니다.
-데이터가 1개 들어올 때 : where xxx in (?)
+먼저 이 현상을 설명하려면 JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우의 수를 모두 캐싱합니다.
+- 데이터가 1개 들어올 때 : where xxx in (?)
 데이터가 2개 들어올 때 : where xxx in (?,?) 
 데이터가 n개 들어올 때 : where xxx in (?,?, ...) 
 
@@ -267,6 +268,58 @@ N+1이슈가 발생한 쿼리가 있고 총 데이터가 83건이면 83번의 �
 - in절 항목이 50으로 캐싱된 쿼리 한 번
 - in절 항목이 25로 캐싱된 쿼리 한 번
 - in절 항목이 8으로 캐싱된 쿼리 한 번 
+```sql
+	select
+        product0_.id as id1_38_0_,
+        product0_.created_by as created_2_38_0_,
+        product0_.created_date as created_3_38_0_,
+        product0_.last_modified_by as last_mod4_38_0_,
+        product0_.last_modified_date as last_mod5_38_0_,
+        product0_.code as code6_38_0_,
+        product0_.name as name7_38_0_,
+        product0_.product_group_code as product_8_38_0_,
+        product0_.product_type as product_9_38_0_
+    from
+        product product0_
+    where
+        product0_.id in (
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+        )
+2020-08-07 17:33:30,948 DEBUG [XNIO-1 task-1] SQL:
+    select
+        product0_.id as id1_38_0_,
+        product0_.created_by as created_2_38_0_,
+        product0_.created_date as created_3_38_0_,
+        product0_.last_modified_by as last_mod4_38_0_,
+        product0_.last_modified_date as last_mod5_38_0_,
+        product0_.code as code6_38_0_,
+        product0_.name as name7_38_0_,
+        product0_.product_group_code as product_8_38_0_,
+        product0_.product_type as product_9_38_0_
+    from
+        product product0_
+    where
+        product0_.id in (
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+        )
+2020-08-07 17:33:30,969 DEBUG [XNIO-1 task-1] SQL:
+    select
+        product0_.id as id1_38_0_,
+        product0_.created_by as created_2_38_0_,
+        product0_.created_date as created_3_38_0_,
+        product0_.last_modified_by as last_mod4_38_0_,
+        product0_.last_modified_date as last_mod5_38_0_,
+        product0_.code as code6_38_0_,
+        product0_.name as name7_38_0_,
+        product0_.product_group_code as product_8_38_0_,
+        product0_.product_type as product_9_38_0_
+    from
+        product product0_
+    where
+        product0_.id in (
+            ?, ?, ?, ?, ?, ?, ?, ?
+        )
+```
 
 이는 하이버네이트 최적화 전략에 의해, 정상적인 부분이며 권장하는 기본전략입니다.
 참고로 선언한(hibernate.default_batch_fetch_size:  100 ) 사이즈 만큼 in절 항목을 발생시키고 싶다면 설정파일에 hibernate.batch_fetch_style: dynamic 을 추가하시면 됩니다.(캐싱되지 않은 케이스로 쿼리가 수행되므로 권장하지 않는 방식이라고 합니다.)
@@ -464,5 +517,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTA1MzE1NDIsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbLTEwMzEwMzY0NzgsLTgyMDYzNDgzNF19
 -->
