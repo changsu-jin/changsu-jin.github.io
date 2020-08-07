@@ -250,7 +250,8 @@ bundle install
 ![](https://raw.githubusercontent.com/changsu-jin/image/master/assets/img/springjpa.png)
 
 ### N+1튜닝
-JDBC의 preparedstatement는  
+JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우의 수를 모두 캐싱합니다.
+데이터가 1개 들어올 때 : where xxx in  
 
 
 
@@ -444,5 +445,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTQxMDIwNTcsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbMzEzMDk0MDMsLTgyMDYzNDgzNF19
 -->
