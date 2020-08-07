@@ -249,7 +249,7 @@ bundle install
 
 ![](https://raw.githubusercontent.com/changsu-jin/image/master/assets/img/springjpa.png)
 
-### N+1튜닝
+###  N+1튜닝
 JDBC의 preparedstatement는 in절이 들어가는 select 쿼리에 대해 각 경우의 수를 모두 캐싱합니다.
 데이터가 1개 들어올 때 : where xxx in (?)
 데이터가 2개 들어올 때 : where xxx in (?,?) 
@@ -269,7 +269,7 @@ N+1이슈가 발생한 쿼리가 있고 총 데이터가 83건이면 83번의 �
 - in절 항목이 8으로 캐싱된 쿼리 한 번 
 
 이는 하이버네이트 최적화 전략에 의해, 정상적인 부분이며 권장하는 기본전략입니다.
-참고로 선언한(hibernate.default_batch_fetch_size:  100 ) 사이즈 만큼 in절 항목을 발생시키고 싶다면 설정파일에 hibernate.batch_fetch_style: dynamic 을 추가하시면 됩니다.
+참고로 선언한(hibernate.default_batch_fetch_size:  100 ) 사이즈 만큼 in절 항목을 발생시키고 싶다면 설정파일에 hibernate.batch_fetch_style: dynamic 을 추가하시면 됩니다.(캐싱되지 않은 케이스로 쿼리가 수행되므로 권장하지 않는 방식이라고 합니다.)
 
 
 
@@ -464,5 +464,5 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MDQ4OTIwMywtODIwNjM0ODM0XX0=
+eyJoaXN0b3J5IjpbMTQ5MDcwMjU0OCwtODIwNjM0ODM0XX0=
 -->
