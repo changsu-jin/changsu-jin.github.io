@@ -1,5 +1,13 @@
 # Tip
 
+## Quick(정리필요)
+aws eks --region ap-northeast-2 update-kubeconfig --name sta_eks
+kubectl logs -f <pod-id>
+
+### JPA 기본 페치 전략
+- @ManyToOne, @OneToOne: 즉시로딩(FetchType.EAGER)
+- @OneToMany, @ManyToMany : 지연로딩(FetchType.LAZY)
+
 
 
 ## Mac
@@ -526,6 +534,6 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTY2OTkxMTQsLTEwMTM4NzMwMzAsLT
-gyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbMTI3NjUyMzI4NSwtMTA1NjY5OTExNCwtMT
+AxMzg3MzAzMCwtODIwNjM0ODM0XX0=
 -->
