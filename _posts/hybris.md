@@ -110,6 +110,39 @@ and cj.CREATEDTS > to_date('201906030000','YYYYMMDDHH24MISS')
 
 ## 업무에 참고 하시기 바랍니다.
 
+
+
+Hybris에서는 Oracle의 sequence나 MySQL에 autoIncrement와 같은 DB단의 증가값을 이용하지 않습니다.
+Solution 자체적으로 KeyGenerator를 가지고 일정하게 증가하는 시퀀스를 사용합니다.
+
+하지만 이 부분
+
+
+
+
+
+
+
+
+
+
+
+PK는 데이터의 고유식별자이며 각 자릿수별로 의미를 가지고 있습니다.
+Hybris PK analyzer를 확인해보면 각 자릿 수가 의미하는 바를 확인 할 수 있습니다.
+
+일반적인 ORM과 다르게 Hybris는 Commerce Solution이므로 PK생성규칙이 매우 복잡합니다.
+그래서 운영 중에 데이터를 Bulk로 밀어넣어야 하는 경우 PK
+
+
+
+
+
+모든 모델은 최상위 모델인 ???를 상속받아 구성되기 때문입니다. 
+
+
+
+
+
 Impex에서 keyGenerator를 이용해서 값을 처리하는 방법중에 Translator를 사용하는 방법이 있습니다.
 
  Impex에서 Translator를 사용하는 방법은 아래와 같습니다.INSERT_UPDATE Customer[impex.legacy.mode=true];uid[unique=true];name[translator=com.kln.estore.core.impex.translators.SaleIdKeyGeneratorTranslator];;abcdefgh1;;;abcdefgh2;; 만든 Translator를 적용하기를 원하는 필드에 지정하면 impex에서 데이터를 추가할 때 Translator가 그 값으로 필드를 채우도록 되어 있고 샘플은 Customer에 데이터를 넣는 예제입니다. Impex가 multi-thread로 동작할 때 키는 unique하게 생성되지만 나열한 데이터와 키의 순서는 현재는 보장되지 않습니다.  위에 데이터가 들어가면 아래와 같이 데이터가 입력이 됩니다. 참고 바랍니다.uid:abcdefgh1    name:000050000005  필요한 Translator가 있으면 아래 소스와 같은 방법으로 구현하시면 됩니다.package com.kln.estore.core.impex.translators;
