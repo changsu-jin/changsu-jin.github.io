@@ -215,6 +215,11 @@ jhipster --skip-cache --skip-install --skip-git --jhi-prefix=csj
 sudo apt-get install -y conntrack
 sudo -E minikube start --vm-driver=none --extra-config=kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
 ```
+- cluster config
+```
+aws eks --region ap-northeast-2 update-kubeconfig --name prod-wms-eks
+```
+
 
 
 
@@ -532,8 +537,8 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 ;
 ~~~
 
-## 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NjUyMzI4NSwtMTA1NjY5OTExNCwtMT
-AxMzg3MzAzMCwtODIwNjM0ODM0XX0=
+eyJoaXN0b3J5IjpbLTM3MDIzNTYwNCwxMjc2NTIzMjg1LC0xMD
+U2Njk5MTE0LC0xMDEzODczMDMwLC04MjA2MzQ4MzRdfQ==
 -->
