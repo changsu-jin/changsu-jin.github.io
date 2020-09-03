@@ -219,6 +219,8 @@ sudo -E minikube start --vm-driver=none --extra-config=kubelet.resolv-conf=/run/
 ```
 aws eks --region ap-northeast-2 update-kubeconfig --name prod-wms-eks
 ```
+- aws cluster 인증
+[# 클러스터 인증](https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/managing-auth.html)
 
 
 
@@ -539,6 +541,6 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDIzNTYwNCwxMjc2NTIzMjg1LC0xMD
-U2Njk5MTE0LC0xMDEzODczMDMwLC04MjA2MzQ4MzRdfQ==
+eyJoaXN0b3J5IjpbMzk3Mzg1MDYwLDEyNzY1MjMyODUsLTEwNT
+Y2OTkxMTQsLTEwMTM4NzMwMzAsLTgyMDYzNDgzNF19
 -->
