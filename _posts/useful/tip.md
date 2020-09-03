@@ -222,6 +222,12 @@ aws eks --region ap-northeast-2 update-kubeconfig --name prod-wms-eks
 - aws cluster 인증
 [# 클러스터 인증](https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/managing-auth.html)
 
+- kubectx
+```
+sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+```
 
 
 
@@ -541,6 +547,7 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk3Mzg1MDYwLDEyNzY1MjMyODUsLTEwNT
-Y2OTkxMTQsLTEwMTM4NzMwMzAsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbLTE1NTIyNjYyOTgsMzk3Mzg1MDYwLDEyNz
+Y1MjMyODUsLTEwNTY2OTkxMTQsLTEwMTM4NzMwMzAsLTgyMDYz
+NDgzNF19
 -->
