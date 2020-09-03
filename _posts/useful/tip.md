@@ -228,7 +228,7 @@ sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
 sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
 sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 ```
-
+[https://github.com/ahmetb/kubectx](https://github.com/ahmetb/kubectx)
 
 
 ### MS Terminal
@@ -547,7 +547,7 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTIyNjYyOTgsMzk3Mzg1MDYwLDEyNz
-Y1MjMyODUsLTEwNTY2OTkxMTQsLTEwMTM4NzMwMzAsLTgyMDYz
-NDgzNF19
+eyJoaXN0b3J5IjpbNzc0OTQ0MjA1LDM5NzM4NTA2MCwxMjc2NT
+IzMjg1LC0xMDU2Njk5MTE0LC0xMDEzODczMDMwLC04MjA2MzQ4
+MzRdfQ==
 -->
