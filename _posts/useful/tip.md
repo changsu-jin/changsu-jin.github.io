@@ -18,6 +18,12 @@ kubectl logs -f <pod-id>
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'; killall Dock
 ```
 
+### brew 권한
+```shell
+sudo chmod -R g+w $(brew --prefix)/*
+```
+
+
 ## Shell
 
 ### NVM
@@ -547,7 +553,7 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc0OTQ0MjA1LDM5NzM4NTA2MCwxMjc2NT
-IzMjg1LC0xMDU2Njk5MTE0LC0xMDEzODczMDMwLC04MjA2MzQ4
-MzRdfQ==
+eyJoaXN0b3J5IjpbMTYzNzY1MTc0Niw3NzQ5NDQyMDUsMzk3Mz
+g1MDYwLDEyNzY1MjMyODUsLTEwNTY2OTkxMTQsLTEwMTM4NzMw
+MzAsLTgyMDYzNDgzNF19
 -->
