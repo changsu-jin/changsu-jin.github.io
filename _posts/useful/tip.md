@@ -10,6 +10,8 @@ kubectl logs -f <pod-id>
 
 
 
+
+
 ## Mac
 
 ### Dock에 빈공간 삽입
@@ -553,7 +555,7 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzY1MTc0Niw3NzQ5NDQyMDUsMzk3Mz
-g1MDYwLDEyNzY1MjMyODUsLTEwNTY2OTkxMTQsLTEwMTM4NzMw
-MzAsLTgyMDYzNDgzNF19
+eyJoaXN0b3J5IjpbODMzNDA1NzY2LDE2Mzc2NTE3NDYsNzc0OT
+Q0MjA1LDM5NzM4NTA2MCwxMjc2NTIzMjg1LC0xMDU2Njk5MTE0
+LC0xMDEzODczMDMwLC04MjA2MzQ4MzRdfQ==
 -->
