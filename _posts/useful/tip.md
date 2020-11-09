@@ -566,7 +566,8 @@ MySQL에서 Pessimistic Lock(비관적 락) 처리
 - 쓰기,읽기 모두를 락을 거는 방식이다.
 - 하지만 실제로 실행해보면 다른 쓰레드에서 읽기에 락이 걸리지 않는다.
 - 다른 쓰레드에서 읽기에도 락이 걸리게 하려면, 해당 쓰레드도 같은 Annontaion을 달아서 select ~ for update구문 나가도록 해줘야 한다.
-- PESSIMISTIC_WRITE락을 획득ㅎ
+- PESSIMISTIC_WRITE락을 획득해도 다른 쓰레드에서 일반적인 select에 대해선 제한 없이 접근가능하다.
+- 해당 락은 row level lock이지만 mysql innoDB의 락 처리 방식은 인덱싱 되지 않은 조건으로 선별 된 row에 대해선 row
 
 
 
@@ -577,7 +578,7 @@ MySQL에서 Pessimistic Lock(비관적 락) 처리
 - [지메일 검색조건](https://support.google.com/mail/answer/7190?hl=ko)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NjUwMzk3NiwtMTIwMjg4MDI1Myw4Mz
+eyJoaXN0b3J5IjpbMTU4NDY5NTAyMCwtMTIwMjg4MDI1Myw4Mz
 M0MDU3NjYsMTYzNzY1MTc0Niw3NzQ5NDQyMDUsMzk3Mzg1MDYw
 LDEyNzY1MjMyODUsLTEwNTY2OTkxMTQsLTEwMTM4NzMwMzAsLT
 gyMDYzNDgzNF19
