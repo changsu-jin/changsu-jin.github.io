@@ -554,7 +554,8 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 ~~~
 
 ### JPA lock in MySQL
-JPA에서 lock은 Optimistic
+JPA에서 lock 처리는 Optimistic, Pessimistic 으로 나눌 수 있으며
+Optimistic은 JPA자체에서 락이 발생하는 상황을 버전정보로 인지하여 Exception을 발생시키는 방식이며 DB레벨의 lock관리가 아니며, 락이 라기보다
 
 
 Pessimistic Lock(비관적 락) 처리 시에
@@ -567,8 +568,8 @@ Pessimistic Lock(비관적 락) 처리 시에
 - [지메일 검색조건](https://support.google.com/mail/answer/7190?hl=ko)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkwODQ5OTM3LC0xMjAyODgwMjUzLDgzMz
-QwNTc2NiwxNjM3NjUxNzQ2LDc3NDk0NDIwNSwzOTczODUwNjAs
-MTI3NjUyMzI4NSwtMTA1NjY5OTExNCwtMTAxMzg3MzAzMCwtOD
-IwNjM0ODM0XX0=
+eyJoaXN0b3J5IjpbMTI0NTUyNDI5MSwtMTIwMjg4MDI1Myw4Mz
+M0MDU3NjYsMTYzNzY1MTc0Niw3NzQ5NDQyMDUsMzk3Mzg1MDYw
+LDEyNzY1MjMyODUsLTEwNTY2OTkxMTQsLTEwMTM4NzMwMzAsLT
+gyMDYzNDgzNF19
 -->
