@@ -561,7 +561,9 @@ Optimistic은 JPA자체에서 락이 발생하는 상황을 버전정보로 인�
 Pessimistic 은 DB레벨의 락제어를 활용하는 방식으로 락이 빈번하게 발생하는 상황을 염두해두고 실제로 락을 제어하는 방식이다.
 
 MySQL에서 Pessimistic Lock(비관적 락) 처리
--
+- SPRING DATA JPA에서 Repository 에서 Annontation으로 처리가능하다.
+- @Lock(LockModeType.PESSIMISTIC_WRITE)
+- 
 
 
 
@@ -572,7 +574,7 @@ MySQL에서 Pessimistic Lock(비관적 락) 처리
 - [지메일 검색조건](https://support.google.com/mail/answer/7190?hl=ko)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjc2NDY0MSwtMTIwMjg4MDI1Myw4Mz
+eyJoaXN0b3J5IjpbLTcxNDU5NDI2NCwtMTIwMjg4MDI1Myw4Mz
 M0MDU3NjYsMTYzNzY1MTc0Niw3NzQ5NDQyMDUsMzk3Mzg1MDYw
 LDEyNzY1MjMyODUsLTEwNTY2OTkxMTQsLTEwMTM4NzMwMzAsLT
 gyMDYzNDgzNF19
