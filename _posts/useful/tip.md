@@ -569,7 +569,9 @@ MySQL에서 Pessimistic Lock(비관적 락) 처리
 - PESSIMISTIC_WRITE락을 획득해도 다른 쓰레드에서 일반적인 select에 대해선 제한 없이 접근가능하다.
 - 해당 락은 row level lock이지만 mysql innoDB의 락 처리 방식은 인덱싱 되지 않은 조건으로 선별 된 row에 대해선 row level로 락은 잡지 못한다. 
 - mysql innoDB의 락 처리 방식은 인덱싱 범위에 대해서 락을 잡는 방식으로 인덱싱 되지 않은 조건으로 선별 된 select결과는 전체 테이블이 락이 걸리는 현상이 발생된다.
-- JPA에서 lock sc
+- JPA에서 lock scope범위에 따라 릴레이션 된 모델들도 함께 락이 잡히게 된다.
+- @QueryHints(value  = {@QueryHint(name  =  "javax.persistence.lock.scope", value  =  "NORMAL")})
+- 위와 같이 QueryHint Annontation으로 scope를 NORMAL로 잡아줘야 해당 테이블만 락의 대상이 된다.
 
 
 
@@ -580,8 +582,8 @@ MySQL에서 Pessimistic Lock(비관적 락) 처리
 - [지메일 검색조건](https://support.google.com/mail/answer/7190?hl=ko)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTQ5MzM0MzUsLTEyMDI4ODAyNTMsOD
-MzNDA1NzY2LDE2Mzc2NTE3NDYsNzc0OTQ0MjA1LDM5NzM4NTA2
-MCwxMjc2NTIzMjg1LC0xMDU2Njk5MTE0LC0xMDEzODczMDMwLC
-04MjA2MzQ4MzRdfQ==
+eyJoaXN0b3J5IjpbLTIyOTg1NTc5OSwtMTIwMjg4MDI1Myw4Mz
+M0MDU3NjYsMTYzNzY1MTc0Niw3NzQ5NDQyMDUsMzk3Mzg1MDYw
+LDEyNzY1MjMyODUsLTEwNTY2OTkxMTQsLTEwMTM4NzMwMzAsLT
+gyMDYzNDgzNF19
 -->
