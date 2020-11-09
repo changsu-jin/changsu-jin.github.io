@@ -553,8 +553,11 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 ;
 ~~~
 
-### JPA lock
+### JPA lock in MySQL
+JPA에서 lock은 Optimistic
 
+
+Pessimistic Lock(비관적 락) 처리 시에
 
 
 
@@ -564,7 +567,7 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 - [지메일 검색조건](https://support.google.com/mail/answer/7190?hl=ko)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5MDk2NDk0LC0xMjAyODgwMjUzLDgzMz
+eyJoaXN0b3J5IjpbMjkwODQ5OTM3LC0xMjAyODgwMjUzLDgzMz
 QwNTc2NiwxNjM3NjUxNzQ2LDc3NDk0NDIwNSwzOTczODUwNjAs
 MTI3NjUyMzI4NSwtMTA1NjY5OTExNCwtMTAxMzg3MzAzMCwtOD
 IwNjM0ODM0XX0=
