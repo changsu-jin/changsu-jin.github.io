@@ -553,6 +553,10 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 ;
 ~~~
 
+### JPA lock
+
+
+
 
 ## CSP
 
@@ -560,8 +564,8 @@ CONNECTION='mysql://mig:****@sta-wms-aurora-mysql-instance-n.clvlkkfuxme1.ap-nor
 - [지메일 검색조건](https://support.google.com/mail/answer/7190?hl=ko)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDI4ODAyNTMsODMzNDA1NzY2LDE2Mz
-c2NTE3NDYsNzc0OTQ0MjA1LDM5NzM4NTA2MCwxMjc2NTIzMjg1
-LC0xMDU2Njk5MTE0LC0xMDEzODczMDMwLC04MjA2MzQ4MzRdfQ
-==
+eyJoaXN0b3J5IjpbNjc5MDk2NDk0LC0xMjAyODgwMjUzLDgzMz
+QwNTc2NiwxNjM3NjUxNzQ2LDc3NDk0NDIwNSwzOTczODUwNjAs
+MTI3NjUyMzI4NSwtMTA1NjY5OTExNCwtMTAxMzg3MzAzMCwtOD
+IwNjM0ODM0XX0=
 -->
