@@ -28,3 +28,5 @@ typora-root-url: ../
 ![](https://i.imgur.com/iKIxeoJ.jpg)
 
 수줍어하는 진수인(6세) 화백2
+
+![](/assets/img/2020-08-02-collaboration/img20200802_10252627.jpg)
