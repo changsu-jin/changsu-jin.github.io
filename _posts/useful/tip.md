@@ -10,6 +10,66 @@ kubectl logs -f <pod-id>
 
 
 
+## 간단
+
+### GIT BRANCH
+
+
+
+https://trustyoo86.github.io/git/2017/11/28/git-remote-branch-create.html
+
+git checkout -b feature-01
+
+git push origin feature-01
+
+git branch --set-upstream-to origin/feature-01
+
+\--------------------------------
+
+git checkout develop   //다른 브랜치로 이동 후 git branch --delete feature-01
+
+### Grafana(Loki) 키워드찾기
+
+
+
+|= "Unknown"
+
+\# 엑셀에서 insert value절 만들기
+
+=CONCAT( )
+
+"(",A1
+
+,",",B1
+
+,"),"
+
+### vscode 빈줄삭제
+
+^\s*$\n 
+
+### intellij(mac)
+
+레퍼런스 찾기 : fn+option_f7
+
+### pulse secure 시작 시 실행안되게
+
+launchctl unload –w /Library/LaunchAgents/net.pulsesecure.pulsetray.plist
+
+
+
+### 피킹정보 오류 찾을 때
+
+cat logFile.2020-12-15.log | grep -B 7 "::: 결과코드 E"
+
+cat logFile.2020-12-15.log | grep -A 5 "::: 작업차수 3"
+
+### 맥북 소리 안날 때
+
+sudo killall coreaudiod
+
+
+
 
 
 ## Mac
