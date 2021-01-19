@@ -97,7 +97,7 @@ author:
   avatar           : "/assets/img/profile/avatar2.jpeg"
   bio              : # "그림 그렸었던 개발자"
   location         : "Seoul, Korea"
-  email            :
+  email            : jin@42class.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
