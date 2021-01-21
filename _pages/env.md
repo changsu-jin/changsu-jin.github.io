@@ -4,6 +4,7 @@ description: "인프라/클라우드/배포/가상화 등 환경구성 과정의
 permalink: /env/
 layout: single
 author_profile: true
+classes: wide
 ---
 
 # Environment & Infrastructure

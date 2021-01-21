@@ -1,5 +1,5 @@
 ---
-published : false
+published : true
 title:  "수인이와 첫 collaboration"
 categories:
   - doodle
@@ -8,7 +8,7 @@ tags:
   - collaboration
   - doodle
 last_modified_at: 2020-08-02T08:06:00-05:00
-typora-root-url: ../
+classes: wide
 ---
 
 

@@ -8,6 +8,7 @@ tags:
   - procreate
   - doodle
 last_modified_at: 2021-01-11T08:06:00-05:00
+classes: wide
 ---
 
 ![](https://raw.githubusercontent.com/changsu-jin/image/master/assets/img/210111.jpg)
