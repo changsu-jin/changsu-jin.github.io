@@ -9,6 +9,9 @@ tags:
   - n+1
 last_modified_at: 2021-02-01T08:06:00-05:00
 classes: wide
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "fas fa-list"
 ---
 
 ## JDBC preparedstatement의 캐싱 방식

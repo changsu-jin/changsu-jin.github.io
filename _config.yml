@@ -93,30 +93,30 @@ analytics:
 
 # Site Author
 author:
-  name             : "ricevalley"
+  name             : "Self Pity  -D. H. Lawrence"
   avatar           : "/assets/img/profile/avatar2.jpeg"
-  bio              : # "그림 그렸었던 개발자"
+  bio              : "I never saw a wild thing sorry for itself. A small bird will drop frozen dead from a bough without ever having felt sorry for itself."
   location         : "Seoul, Korea"
   email            : jin@42class.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:jin@42class.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/changsu-jin/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    #- label: "Email"
+    #  icon: "fas fa-fw fa-envelope-square"
+    #  url: "mailto:jin@42class.com"
+    #- label: "Website"
+    #  icon: "fas fa-fw fa-link"
+    #  url: "https://your-website.com"
+    #- label: "Twitter"
+    #  icon: "fab fa-fw fa-twitter-square"
+    #  url: "https://twitter.com/"
+    #- label: "Facebook"
+    #  icon: "fab fa-fw fa-facebook-square"
+    #  url: "https://facebook.com/"
+    #- label: "GitHub"
+    #  icon: "fab fa-fw fa-github"
+    #  url: "https://github.com/changsu-jin/"
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  url: "https://instagram.com/"
 
 # Site Footer
 footer:
@@ -274,9 +274,24 @@ defaults:
       type: posts
     values:
       layout: single
+      sidebar:
+        nav: "all"
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
-      
+
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      sidebar:
+        nav: "all"
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  
