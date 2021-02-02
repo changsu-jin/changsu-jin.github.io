@@ -24,7 +24,7 @@ description              : "An amazing website."
 url                      : "https://42class.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/img/logo-white.png"
+teaser                   : # "/assets/img/logo-white.png"
 logo                     : "/assets/img/logo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
@@ -93,15 +93,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Self Pity  -D. H. Lawrence"
+  name             : "별일 없이 산다."
   avatar           : "/assets/img/profile/avatar2.jpeg"
-  bio              : "I never saw a wild thing sorry for itself. A small bird will drop frozen dead from a bough without ever having felt sorry for itself."
+  bio              : "Developer, DevOps, e-Commerce, Warehouse Management System ... and I like to draw"
   location         : "Seoul, Korea"
-  email            : jin@42class.com
+  #email            : jin@42class.com
   links:
-    #- label: "Email"
-    #  icon: "fas fa-fw fa-envelope-square"
-    #  url: "mailto:jin@42class.com"
+    - label: "bewell@42class.com"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:jin@42class.com"
     #- label: "Website"
     #  icon: "fas fa-fw fa-link"
     #  url: "https://your-website.com"
@@ -207,7 +207,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 50 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -275,12 +275,18 @@ defaults:
     values:
       layout: single
       sidebar:
-        nav: "all"
+        - title: "contents"
+          image: http://placehold.it/350x1
+        - nav: "all"  
+        - title: ""
+          image: http://placehold.it/350x1
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
+      header:
+        image: /assets/img/main_banner.jpg
 
   - scope:
       path: ""
@@ -288,10 +294,16 @@ defaults:
     values:
       layout: single
       sidebar:
-        nav: "all"
+        - title: "contents"
+          image: http://placehold.it/350x1
+        - nav: "all"  
+        - title: ""
+          image: http://placehold.it/350x1
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
+      header:
+        image: /assets/img/main_banner.jpg
   

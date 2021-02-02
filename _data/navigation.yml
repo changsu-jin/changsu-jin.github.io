@@ -1,10 +1,12 @@
 # main links
 main:
-  - title: "development"
+  - title: "About"
+    url: /about/
+  - title: "Development"
     url: /dev/
-  - title: "environment"
+  - title: "Environment"
     url: /env/  
-  - title: "categories"
+  - title: "Categories"
     url: /categories/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/

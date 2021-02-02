@@ -6,7 +6,7 @@ layout: single
 author_profile: true
 classes: wide
 ---
-
+![](/assets/img/environment.jpg) 
 
 ## Windows10(WSL2) 에서 MacBook 으로 작업 환경 전환 기록
 

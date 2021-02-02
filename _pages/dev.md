@@ -6,6 +6,8 @@ layout: single
 author_profile: true
 classes: wide
 ---
+![](/assets/img/main.jpg) 
+
 
 
 ## JPA 운영 기록
