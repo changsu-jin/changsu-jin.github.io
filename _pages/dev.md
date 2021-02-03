@@ -17,7 +17,7 @@ JPA를 사용하면서 파악한 운영지식을 정리합니다.
 
 1. [JPA N+1튜닝과정에서 선언한 배치 사이즈와 다르게 쿼리 분할 되어 수행되는 이유](/dev/jpa-batchsize/)
 
-2. Pessimistic Lock 처리와 MySQL 그리고 Oracle
+2. [Pessimistic Lock 처리와 MySQL 그리고 Oracle](/dev/jpa-lock/)
 
    
 
