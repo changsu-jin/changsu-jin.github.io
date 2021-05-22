@@ -39,7 +39,10 @@ all:
       url: /pendency/writing/
     - title: "- Docker 컨테이너 원격 개발환경 구축"
       url: /pendency/writing/
-
+- title: 작업 효율을 높이는 랩탑 환경 구축
+  children:
+    - title: "- RDP(Mac to Windows)환경에서 Mac OS환경과 동일한 단축키 사용하기"
+      url: /env/karabiner/
 - title: Doodle
   children:
     - title: "- Asian girl 21/01/04"

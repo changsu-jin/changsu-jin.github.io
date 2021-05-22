@@ -30,4 +30,7 @@ classes: wide
 2. Docker 컨테이너 원격 개발환경 구축
 
 
+## 작업 효율을 높이는 랩탑 환경 구축
+1. [RDP(Mac to Windows)환경에서 Mac OS환경과 동일한 단축키 사용하기](/env/karabiner/)
+
 
