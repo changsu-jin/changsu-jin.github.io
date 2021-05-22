@@ -56,7 +56,7 @@ classes: wide
 
 하지만 **RDP(Mac to Windows)** 에서는 한영전환이 **Right ⌥**키로 매핑됩니다.  
 바로 한 칸 차이 지만 실제 몰두 해서 타이핑 할 때 요 한칸 차이 땜에 엄청 버벅이고 있더군요.  
-그래서 **Karabiner**를 이용해 <span style="color:orange">RDP전용 Profile을 하나 만들고 해당 Profile에선 **Right ⌘**키와 **Right ⌥**키를 서로 스위칭</span> 했습니다.
+그래서 [**Karabiner**](https://karabiner-elements.pqrs.org/)를 이용해 <span style="color:orange">RDP전용 Profile을 하나 만들고 해당 Profile에선 **Right ⌘**키와 **Right ⌥**키를 서로 스위칭</span> 했습니다.
 
 > Karabiner Profile 추가
 
