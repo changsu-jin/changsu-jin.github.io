@@ -7,7 +7,7 @@ author_profile: true
 classes: wide
 ---
 
-> Cloud환경 DevOps와 MSA에 관심 많은 Software Engineer 입니다.  
+> Cloud환경 DevOps와 MSA에 관심 많은 개발자 입니다.  
 *e-Commerce System, WMS System* 을 주로 구축했습니다.  
 그림 그리는 걸 좋아합니다.
 
