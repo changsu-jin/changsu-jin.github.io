@@ -1,4 +1,6 @@
 ---
+# typora-root-url은 작성시에만 활성화, 배포시에는 비활성화 
+# typora-root-url:/..
 published : true
 title:  "Choose Your Own Adventure 모험, 나의 선택 - Hernan Bas"
 categories:
@@ -16,6 +18,9 @@ classes: wide
 BTS RM도 다녀갔다는 Hernan Bas 전시 ㅎㅎ  
 강서구민은 할인도 되네요.
 
+
+
+![image-20210612083727903](/../custom/image-20210612083727903.png)
 
 [헤르난 바스 인터뷰](http://www.artinculture.kr/online/1096)  
 [SPACE K](https://www.spacek.co.kr/index.do)
