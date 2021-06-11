@@ -18,10 +18,6 @@ classes: wide
 BTS RM도 다녀갔다는 Hernan Bas 전시 ㅎㅎ  
 강서구민은 할인도 되네요.
 
-
-
-![image-20210612083727903](/../custom/image-20210612083727903.png)
-
 [헤르난 바스 인터뷰](http://www.artinculture.kr/online/1096)  
 [SPACE K](https://www.spacek.co.kr/index.do)
 
