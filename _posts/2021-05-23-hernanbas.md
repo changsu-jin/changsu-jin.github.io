@@ -1,6 +1,5 @@
 ---
-# typora-root-url은 작성시에만 활성화, 배포시에는 비활성화 
-# typora-root-url:/..
+typora-root-url : /..
 published : true
 title:  "Choose Your Own Adventure 모험, 나의 선택 - Hernan Bas"
 categories:
