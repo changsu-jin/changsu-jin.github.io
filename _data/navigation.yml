@@ -51,6 +51,8 @@ all:
       url: /doodle/brown-women/
     - title: "- Black hair 21/01/18"
       url: /doodle/black-hair-girl/
+    - title: "- Man 21/06/25"
+      url: /doodle/man/
 - title: Life
   children:    
     - title: "- Choose Your Own Adventure - Hernan Bas"
