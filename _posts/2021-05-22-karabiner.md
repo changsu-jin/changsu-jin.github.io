@@ -6,7 +6,7 @@ categories:
 tags:
   - karabiner
   - Karabiner-Elements
-  - Karabiner Complex Modification
+  - Karabiner-Complex-Modification
   - Remap
 last_modified_at: 2021-05-22T08:06:00-05:00
 classes: wide

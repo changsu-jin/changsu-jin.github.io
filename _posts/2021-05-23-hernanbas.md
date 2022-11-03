@@ -5,7 +5,7 @@ title:  "Choose Your Own Adventure 모험, 나의 선택 - Hernan Bas"
 categories:
   - life
 tags:
-  - Hernan Bas
+  - Hernan-Bas
   - 스페이스K
   - spacek
 last_modified_at: 2021-01-18T08:06:00-05:00
