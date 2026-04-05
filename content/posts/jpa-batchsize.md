@@ -7,6 +7,7 @@ tags:
   - jpa
   - batch_size
   - n+1
+image: "/img/title_jpa.png"
 ---
 
 ![](/img/title_jpa.png)

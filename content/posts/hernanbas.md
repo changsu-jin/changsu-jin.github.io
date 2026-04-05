@@ -7,6 +7,7 @@ tags:
   - Hernan-Bas
   - 스페이스K
   - spacek
+image: "/img/hernanbas/1.jpg"
 ---
 
 ## SPACE K SEOUL 2021.05.22

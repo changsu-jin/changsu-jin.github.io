@@ -8,6 +8,7 @@ tags:
   - ipad
   - procreate
   - doodle
+image: "/img/210118.JPG"
 ---
 
 ![](/img/210118.JPG)

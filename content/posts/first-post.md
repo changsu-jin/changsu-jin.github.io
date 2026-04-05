@@ -7,6 +7,7 @@ tags:
   - ipad
   - fresco
   - doodle
+image: "/img/girl.png"
 ---
 
 ![](/img/girl.png)

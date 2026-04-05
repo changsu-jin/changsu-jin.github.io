@@ -7,6 +7,7 @@ tags:
   - jpa
   - PESSIMISTIC_WRITE
   - LockModeType
+image: "/img/title_jpa.png"
 ---
 
 ![](/img/title_jpa.png)

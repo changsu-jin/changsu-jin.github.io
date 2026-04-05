@@ -8,6 +8,7 @@ tags:
   - Karabiner-Elements
   - Karabiner-Complex-Modification
   - Remap
+image: "/img/profile-add.png"
 ---
 
 

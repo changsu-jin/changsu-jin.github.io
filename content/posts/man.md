@@ -7,6 +7,7 @@ tags:
   - ipad
   - procreate
   - doodle
+image: "/img/image-20210625110355562.png"
 ---
 
 ![image-20210625110355562](/img/image-20210625110355562.png)

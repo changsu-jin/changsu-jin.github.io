@@ -12,6 +12,7 @@ tags:
   - speaker-diarization
   - python
   - typescript
+image: "/img/meetnote-screenshot.png"
 ---
 
 ## 왜 만들었나
