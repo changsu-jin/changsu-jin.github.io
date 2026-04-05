@@ -83,6 +83,10 @@ menu:
       url: https://github.com/changsu-jin/meetnote
       params:
         icon: brand-github
+    - name: LinkedIn
+      url: "https://www.linkedin.com/in/%EC%B0%BD%EC%88%98-%EC%A7%84-a4718333b/"
+      params:
+        icon: brand-linkedin
     - name: Email
       url: "mailto:changsu.jin@outlook.com"
       params:
