@@ -5,8 +5,8 @@ url: "/about/"
 ---
 
 > Cloud환경 DevOps와 MSA에 관심 많은 개발자 입니다.  
-*e-Commerce System, WMS System* 을 주로 구축했습니다.  
-그림 그리는 걸 좋아합니다.
+e-Commerce System, WMS System 을 주로 구축했습니다.  
+그림 그리는 것과 스쿼시를 좋아합니다.
 
 ![](/img/about.jpg)
 
