@@ -1,4 +1,14 @@
 {{ $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) }}
-<article class="{{ if $image }}has-image{{ end }}">
+{{ $hasImage := and $image $image.Permalink }}
+{{ $staticImage := false }}
+{{ if and (not $hasImage) .Params.image }}
+    {{ $staticImage = true }}
+{{ end }}
+<article class="{{ if or $hasImage $staticImage }}has-image{{ end }}">
+    {{ if $staticImage }}
+    <div class="article-image">
+        <img src="{{ .Params.image }}" alt="Featured image of post {{ .Title }}" loading="lazy">
+    </div>
+    {{ end }}
     {{ partial "article/components/header" (dict "Page" . "IsList" true) }}
 </article>

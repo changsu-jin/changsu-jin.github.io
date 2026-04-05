@@ -1,0 +1,37 @@
+{{ $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) }}
+{{ $hasImage := and $image $image.Permalink }}
+{{ $staticImage := false }}
+{{ if and (not $hasImage) .Params.image }}
+    {{ $staticImage = true }}
+{{ end }}
+<article class="{{ if or $hasImage $staticImage }}has-image{{ end }}">
+    <a href="{{ .RelPermalink }}">
+        {{ if $hasImage }}
+        <div class="article-image">
+            {{ partial "helper/thumbnail-image" (dict
+                "Resource" $image.Resource
+                "Width" 250
+                "Height" 150
+                "Resize" .Site.Params.ImageProcessing.Thumbnail.Enabled
+                "Attributes" (dict
+                    "src" $image.Permalink
+                    "alt" (printf "Featured image of post %s" .Title)
+                    "loading" "lazy"
+                    "width" $image.Width
+                    "height" $image.Height
+                )
+            ) }}
+        </div>
+        {{ else if $staticImage }}
+        <div class="article-image">
+            <img src="{{ .Params.image }}" alt="Featured image of post {{ .Title }}" loading="lazy" style="width:100%;height:150px;object-fit:cover;">
+        </div>
+        {{ end }}
+
+        <div class="article-details">
+            <h2 class="article-title">
+                {{- .Title -}}
+            </h2>
+        </div>
+    </a>
+</article>
