@@ -97,7 +97,7 @@ Transcriber와 Diarizer는 GPU 메모리를 많이 쓰기 때문에 싱글톤으
 
 ## 타임라인
 
-22일간 115개 커밋. 혼자서 기획부터 배포까지.
+집중적으로 작업한 건 약 일주일. 115개 커밋, 혼자서 기획부터 배포까지.
 
 - **Phase 0** — MVP: 실시간 전사, 화자 분리, 요약, 암호화, RAG 검색
 - **Phase 1** — 안정화: 버그 수정, 환각 필터, 품질 최적화
@@ -106,7 +106,7 @@ Transcriber와 Diarizer는 GPU 메모리를 많이 쓰기 때문에 싱글톤으
 
 ## 돌아보며
 
-22일이라는 짧은 기간이었지만, "내가 직접 쓸 도구"를 만드는 과정이라 몰입도가 높았다. 특히 화자 임베딩 DB의 누적 학습은 쓸수록 똑똑해지는 느낌이 있어서 뿌듯하다.
+일주일이라는 짧은 기간이었지만, "내가 직접 쓸 도구"를 만드는 과정이라 몰입도가 높았다. 특히 화자 임베딩 DB의 누적 학습은 쓸수록 똑똑해지는 느낌이 있어서 뿌듯하다.
 
 아쉬운 점은 Windows 네이티브 지원이 아직 Docker(WSL2) 의존이라는 것. 그리고 CPU 환경에서는 60분 회의 처리에 40분이 걸려서 실용성이 떨어진다.
 
@@ -114,4 +114,8 @@ Transcriber와 Diarizer는 GPU 메모리를 많이 쓰기 때문에 싱글톤으
 
 ---
 
-[GitHub Repository](https://github.com/changsu-jin/meetnote)
+<div style="background: linear-gradient(135deg, #24292e 0%, #40464d 100%); border-radius: 12px; padding: 24px 32px; text-align: center; margin-top: 32px;">
+  <p style="color: #f0f0f0; font-size: 1.2em; margin-bottom: 12px; font-weight: bold;">Meetnote — 로컬 회의록 자동화</p>
+  <p style="color: #8b949e; font-size: 0.9em; margin-bottom: 16px;">Obsidian plugin for local meeting transcription, speaker diarization, and AI summarization</p>
+  <a href="https://github.com/changsu-jin/meetnote" style="display: inline-block; background: #238636; color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1em;">GitHub에서 보기 →</a>
+</div>
