@@ -25,7 +25,12 @@
         </div>
 
         {{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
-        {{ if $image }}
+        {{- $hasImage := and $image $image.Permalink -}}
+        {{- $staticImage := false -}}
+        {{- if and (not $hasImage) .Params.image -}}
+            {{- $staticImage = true -}}
+        {{- end -}}
+        {{ if $hasImage }}
         <div class="article-image">
             {{ partial "helper/thumbnail-image" (dict
                 "Resource" $image.Resource
@@ -40,6 +45,10 @@
                     "height" $image.Height
                 )
             ) }}
+        </div>
+        {{ else if $staticImage }}
+        <div class="article-image">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" style="width:60px;height:60px;object-fit:cover;border-radius:4px;">
         </div>
         {{ end }}
     </a>
