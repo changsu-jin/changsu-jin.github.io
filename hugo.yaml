@@ -1,0 +1,83 @@
+baseURL: "https://42class.com"
+languageCode: "ko"
+title: "42Class"
+theme: "stack"
+
+pagination:
+  pagerSize: 10
+
+params:
+  mainSections:
+    - posts
+  description: "Developer who draws"
+  favicon: /img/logo.png
+
+  sidebar:
+    emoji:
+    subtitle: "Developer, DevOps & Doodle"
+    avatar: "img/profile/avatar2.jpeg"
+
+  article:
+    math: false
+    toc: true
+    readingTime: true
+
+  colorScheme:
+    toggle: true
+    default: light
+
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+      - type: categories
+      - type: tag-cloud
+
+  footer:
+    since: 2020
+
+  defaultImage:
+    opengraph:
+      enabled: false
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: About
+      url: /about
+      weight: 2
+    - name: Development
+      url: /dev
+      weight: 3
+    - name: Environment
+      url: /env
+      weight: 4
+    - name: Archives
+      url: /archives
+      weight: 5
+    - name: Categories
+      url: /categories
+      weight: 6
+
+  social:
+    - name: Meetnote
+      url: https://github.com/changsu-jin/meetnote
+      params:
+        icon: brand-github
+    - name: Email
+      url: "mailto:changsu.jin@outlook.com"
+      params:
+        icon: messages
+
+permalinks:
+  posts: /:section/:slug/
+
+markup:
+  highlight:
+    style: dracula
+    lineNos: false
+  goldmark:
+    renderer:
+      unsafe: true
