@@ -47,6 +47,8 @@ params:
       - type: archives
       - type: categories
       - type: tag-cloud
+    page:
+      - type: toc
 
   footer:
     since: 2020
