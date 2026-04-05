@@ -30,15 +30,6 @@ all:
   children:
     - title: "- Mac에서 WSL로 접근하기"
       url: /env/wsl-ssh/
-    - title: "- Private Docker Registry 구축"
-      url: /pendency/writing/
-
-- title: 어디서든 개발 가능한 원격 개발 환경 구축기
-  children:
-    - title: "- Google Cloud로 Markdown 파일 관리하기"
-      url: /pendency/writing/
-    - title: "- Docker 컨테이너 원격 개발환경 구축"
-      url: /pendency/writing/
 - title: 작업 효율을 높이는 랩탑 환경 구축
   children:
     - title: "- RDP(Mac to Windows)환경에서 Mac OS환경과 동일한 단축키 사용하기"
