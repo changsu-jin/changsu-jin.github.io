@@ -17,6 +17,21 @@ params:
     subtitle: "Developer, DevOps & Doodle"
     avatar: "img/profile/avatar2.jpeg"
 
+  comments:
+    enabled: true
+    provider: giscus
+    giscus:
+      repo: "changsu-jin/changsu-jin.github.io"
+      repoID: "MDEwOlJlcG9zaXRvcnkyODQyOTA1OTM="
+      category: "General"
+      categoryID: "DIC_kwDOEPHuIc4C6HnE"
+      mapping: "pathname"
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: "top"
+      theme: "preferred_color_scheme"
+      lang: "ko"
+
   article:
     math: false
     toc: true
@@ -70,6 +85,17 @@ menu:
       url: "mailto:changsu.jin@outlook.com"
       params:
         icon: messages
+
+related:
+  includeNewer: true
+  threshold: 30
+  indices:
+    - name: categories
+      weight: 200
+    - name: tags
+      weight: 100
+    - name: date
+      weight: 10
 
 permalinks:
   posts: /:section/:slug/
