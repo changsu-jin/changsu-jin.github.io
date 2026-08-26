@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>간사이 3박4일 — 오사카 · 기노사키온천 · 교토</title>
+<meta name="description" content="2026년 9월 30일부터 10월 3일까지, 세 식구의 간사이 여행 계획표.">
+<meta name="theme-color" content="#2B4C74">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* ── tokens ───────────────────────────────────────────── */
+:root{
+  --ground:#F1F3EE;
+  --surface:#FFFFFF;
+  --surface-2:#E7EAE2;
+  --ink:#172029;
+  --ink-soft:#33414D;
+  --muted:#5D6B76;
+  --line:#D6DAD0;
+  --line-soft:#E4E7DE;
+  --ai:#2B4C74;          /* 쪽빛 — 노선·표제 */
+  --ai-soft:#E2E9F1;
+  --yu:#5E8F86;          /* 온천 — 기노사키 구간 */
+  --yu-soft:#E0EAE6;
+  --kaki:#B44F17;        /* 감빛 — 마감·주의에만 */
+  --kaki-soft:#F6E6DC;
+  --shadow:0 1px 2px rgba(23,32,41,.05), 0 8px 24px -14px rgba(23,32,41,.28);
+  --rule:1px solid var(--line);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E141A;
+    --surface:#161F27;
+    --surface-2:#1D2832;
+    --ink:#E6EBEF;
+    --ink-soft:#C4CED6;
+    --muted:#93A2AE;
+    --line:#2A3642;
+    --line-soft:#222D38;
+    --ai:#8AB1DA;
+    --ai-soft:#1B2A3B;
+    --yu:#8CBDB2;
+    --yu-soft:#172A28;
+    --kaki:#E4884E;
+    --kaki-soft:#31211A;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E141A;
+  --surface:#161F27;
+  --surface-2:#1D2832;
+  --ink:#E6EBEF;
+  --ink-soft:#C4CED6;
+  --muted:#93A2AE;
+  --line:#2A3642;
+  --line-soft:#222D38;
+  --ai:#8AB1DA;
+  --ai-soft:#1B2A3B;
+  --yu:#8CBDB2;
+  --yu-soft:#172A28;
+  --kaki:#E4884E;
+  --kaki-soft:#31211A;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.7);
+}
+
+/* ── base ─────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"IBM Plex Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.72;
+  letter-spacing:-.005em;
+  word-break:keep-all;      /* 한글은 단어 단위로 끊는다 */
+  overflow-wrap:break-word;
+}
+h1,h2,h3,h4{font-family:"Gowun Batang","Nanum Myeongjo",serif;font-weight:700;line-height:1.35;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--ai);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ai);outline-offset:3px;border-radius:3px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
+.wrap{width:100%;max-width:56rem;margin-inline:auto;padding-inline:20px}
+svg{display:block}
+
+/* ── 표지 ─────────────────────────────────────────────── */
+.cover{position:relative;overflow:hidden;background:var(--surface);border-bottom:var(--rule)}
+.cover-art{display:block;width:100%;height:auto;opacity:.92;pointer-events:none}
+.cover-inner{position:relative;padding-block:clamp(40px,9vw,76px) clamp(24px,4vw,40px)}
+.eyebrow{
+  font-size:.86rem;font-weight:400;color:var(--muted);margin-bottom:14px
+}
+.cover h1{font-size:clamp(2.1rem,7.4vw,3.5rem);letter-spacing:-.02em}
+.cover h1 .thin{font-weight:400;color:var(--ai)}
+.cover .lede{margin-top:14px;font-size:clamp(1rem,2.6vw,1.12rem);color:var(--ink-soft);max-width:34ch}
+.stamp{
+  display:inline-flex;align-items:baseline;gap:10px;margin-top:26px;padding:9px 16px;
+  background:var(--ai);color:var(--surface);border-radius:2px
+}
+:root[data-theme="dark"] .stamp,
+:root:not([data-theme="light"]) .stamp{color:var(--ground)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .stamp{color:#fff}}
+.stamp .d{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:1rem;letter-spacing:.02em}
+.stamp .n{font-size:.82rem;opacity:.85}
+
+/* ── 항공 티켓 ────────────────────────────────────────── */
+.flights{display:grid;gap:10px;margin-top:26px;max-width:30rem}
+.flight{
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;
+  padding:12px 16px;background:var(--surface-2);border-radius:3px
+}
+.flight .code{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:.8rem;color:var(--ai);letter-spacing:.04em}
+.flight .leg{font-family:"IBM Plex Mono",monospace;font-size:.88rem;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+.flight .dur{font-size:.74rem;color:var(--muted);white-space:nowrap}
+
+/* ── 섹션 ─────────────────────────────────────────────── */
+section{padding-block:clamp(44px,8vw,72px)}
+section + section{border-top:1px solid var(--line-soft)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(1.35rem,4vw,1.75rem);letter-spacing:-.015em}
+.sec-head .note{font-size:.85rem;color:var(--muted)}
+
+/* ── 노선 스트립 ──────────────────────────────────────── */
+.route{display:flex;flex-direction:column;gap:0;background:var(--surface);border:var(--rule);border-radius:4px;overflow:hidden}
+.route-stop{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:16px 18px;align-items:start}
+.route-stop + .route-stop{border-top:1px solid var(--line-soft)}
+.route-day{font-family:"IBM Plex Mono",monospace;font-size:.74rem;font-weight:600;letter-spacing:.08em;color:var(--muted);padding-top:3px}
+.route-place{font-family:"Gowun Batang",serif;font-weight:700;font-size:1.05rem}
+.route-desc{font-size:.86rem;color:var(--muted);margin-top:2px}
+.route-move{
+  display:flex;align-items:center;gap:9px;padding:9px 18px 9px 98px;
+  background:var(--surface-2);font-size:.78rem;color:var(--ink-soft)
+}
+.route-move .mono{font-size:.76rem;color:var(--muted)}
+.ic{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── 알림 박스 ────────────────────────────────────────── */
+.alert{
+  display:grid;grid-template-columns:auto 1fr;gap:14px;
+  padding:18px 20px;border-radius:4px;background:var(--kaki-soft);
+  border-left:3px solid var(--kaki)
+}
+.alert .ic{width:20px;height:20px;color:var(--kaki);margin-top:3px}
+.alert h3{font-size:1rem;color:var(--kaki);margin-bottom:6px}
+.alert p{font-size:.9rem;color:var(--ink-soft)}
+.alert ol{margin:10px 0 0;padding-left:1.2em;font-size:.9rem;color:var(--ink-soft)}
+.alert li{margin-bottom:4px}
+.alert li strong{color:var(--ink)}
+
+/* ── 하루 ─────────────────────────────────────────────── */
+.day{background:var(--surface);border:var(--rule);border-radius:4px;overflow:hidden}
+.day + .day{margin-top:20px}
+.day-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:18px 20px;border-bottom:1px solid var(--line-soft);background:var(--ai-soft)}
+.day--yu .day-head{background:var(--yu-soft)}
+.day-no{font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:600;letter-spacing:.14em;color:var(--ai)}
+.day--yu .day-no{color:var(--yu)}
+.day-head h3{font-size:1.15rem}
+.day-head .date{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--muted);margin-left:auto}
+
+/* 시각표 레일 */
+.rail{list-style:none;margin:0;padding:6px 20px 20px}
+.stop{position:relative;display:grid;grid-template-columns:56px 1fr;gap:16px;padding:14px 0 14px}
+.stop::before{ /* 선로 */
+  content:"";position:absolute;left:63px;top:0;bottom:0;width:1px;background:var(--line)
+}
+.stop:first-child::before{top:24px}
+.stop:last-child::before{bottom:auto;height:24px}
+.stop::after{ /* 정거장 점 */
+  content:"";position:absolute;left:59px;top:22px;width:9px;height:9px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--ai)
+}
+.day--yu .stop::after{border-color:var(--yu)}
+.stop--mark::after{background:var(--ai);width:11px;height:11px;left:58px;top:21px}
+.day--yu .stop--mark::after{background:var(--yu)}
+.stop-time{
+  font-family:"IBM Plex Mono",monospace;font-size:.82rem;font-weight:500;
+  font-variant-numeric:tabular-nums;color:var(--ai);padding-top:3px;text-align:right
+}
+.day--yu .stop-time{color:var(--yu)}
+.stop-time.soft{color:var(--muted);font-weight:400}
+.stop-body{padding-left:22px}
+.stop-title{font-weight:500;font-size:1rem}
+.stop-note{font-size:.88rem;color:var(--muted);margin-top:3px}
+.stop-note b{color:var(--ink-soft);font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.tag{
+  font-size:.73rem;padding:3px 9px;border-radius:2px;
+  background:var(--surface-2);color:var(--ink-soft);white-space:nowrap
+}
+.tag--pick{background:var(--ai-soft);color:var(--ai);font-weight:500}
+.tag--warn{background:var(--kaki-soft);color:var(--kaki);font-weight:500}
+
+/* ── 표 ───────────────────────────────────────────────── */
+.tablewrap{overflow-x:auto;border:var(--rule);border-radius:4px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:32rem;font-size:.88rem}
+caption{text-align:left;padding:14px 18px 0;font-size:.82rem;color:var(--muted)}
+th,td{padding:11px 16px;text-align:left;border-bottom:1px solid var(--line-soft);vertical-align:top}
+thead th.rt{text-align:right}
+thead th{
+  font-family:"IBM Plex Mono",monospace;font-size:.7rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);background:var(--surface-2);border-bottom:var(--rule);white-space:nowrap
+}
+tbody tr:last-child td{border-bottom:0}
+td.num{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--surface-2)}
+.ok{color:var(--yu);font-weight:600}
+.no{color:var(--kaki);font-weight:600}
+
+/* ── 사진 ─────────────────────────────────────────────── */
+.ph{display:block;width:100%;object-fit:cover;background:var(--surface-2)}
+.cover-photo{height:clamp(190px,42vw,400px);border-bottom:var(--rule)}
+.day-photo{height:clamp(150px,30vw,230px);border-bottom:1px solid var(--line-soft)}
+.card-photo{height:170px}
+.figure{margin:0 0 18px;border:var(--rule);border-radius:4px;overflow:hidden;background:var(--surface)}
+.figure .ph{height:clamp(170px,32vw,260px)}
+.figure figcaption{padding:10px 16px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line-soft)}
+.stop-photo{margin-top:12px;border-radius:3px;overflow:hidden;max-width:24rem}
+.stop-photo .ph{height:150px}
+
+/* ── 지도 ─────────────────────────────────────────────── */
+.mapbox{background:var(--surface);border:var(--rule);border-radius:4px;padding:8px 8px 4px}
+.map{width:100%;height:auto;max-width:40rem;margin-inline:auto}
+.map .land{fill:var(--surface-2)}
+.map .sea{fill:var(--ai);opacity:.13}
+.map .searim{fill:none;stroke:var(--ai);stroke-width:1.5;opacity:.35}
+.map .leg{fill:none;stroke:var(--ai);stroke-width:3.4;stroke-linecap:round}
+.map .legname{fill:var(--muted);font-size:15px;font-family:"IBM Plex Sans KR",sans-serif}
+.map .legtime{fill:var(--ai);font-size:15px;font-weight:600;font-family:"IBM Plex Mono",monospace}
+.map .badge{fill:var(--ai)}
+.map .badgetx{fill:var(--surface);font-size:15px;font-weight:600;font-family:"IBM Plex Mono",monospace;text-anchor:middle}
+.map .dot{fill:var(--surface);stroke:var(--ai);stroke-width:4}
+.map .dot--yu{stroke:var(--yu)}
+.map .dot--air{fill:var(--ai);stroke:none}
+.map .place{fill:var(--ink);font-size:21px;font-weight:600;font-family:"IBM Plex Sans KR",sans-serif}
+.map .place--yu{fill:var(--yu)}
+.map .sub{fill:var(--muted);font-size:15px;font-family:"IBM Plex Sans KR",sans-serif}
+.map .waters{fill:var(--ai);opacity:.5;font-size:16px;font-family:"IBM Plex Sans KR",sans-serif;letter-spacing:.14em}
+.mapnote{margin-top:12px;font-size:.82rem;color:var(--muted)}
+
+/* ── 먹거리 카드 ──────────────────────────────────────── */
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{background:var(--surface);border:var(--rule);border-radius:4px;padding:18px 20px;box-shadow:var(--shadow)}
+.card--art{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.card-art{
+  display:flex;align-items:center;justify-content:center;
+  height:132px;background:var(--surface-2);border-bottom:1px solid var(--line-soft)
+}
+.card--yu .card-art{background:var(--yu-soft)}
+.card-art svg{width:104px;height:104px}
+.card-body{padding:16px 20px 18px;display:flex;flex-direction:column;flex:1}
+.card-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.card--art .card-top{margin-bottom:4px}
+.card-top .ic{width:19px;height:19px;color:var(--ai)}
+.card--yu .card-top .ic{color:var(--yu)}
+.card--art .menu{margin-top:auto}
+.card h4{font-size:1.05rem;font-family:"Gowun Batang",serif;font-weight:700}
+.card .where{font-size:.76rem;color:var(--muted);font-family:"IBM Plex Mono",monospace;margin-bottom:8px}
+.card p{font-size:.88rem;color:var(--ink-soft)}
+.card .menu{margin-top:10px;padding-top:10px;border-top:1px solid var(--line-soft);font-size:.83rem;color:var(--muted)}
+.card .menu b{color:var(--ink);font-weight:500}
+
+/* ── 체크리스트 ───────────────────────────────────────── */
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.checks li{display:grid;grid-template-columns:auto 1fr;gap:13px;padding:13px 18px;background:var(--surface);border:1px solid var(--line-soft)}
+.checks li:first-child{border-radius:4px 4px 0 0}
+.checks li:last-child{border-radius:0 0 4px 4px}
+.checks li + li{border-top:0}
+.box{width:17px;height:17px;border:1.5px solid var(--line);border-radius:2px;margin-top:5px;flex:none;background:var(--ground)}
+.checks .t{font-size:.93rem}
+.checks .s{font-size:.82rem;color:var(--muted);margin-top:1px}
+
+/* ── 마무리 ───────────────────────────────────────────── */
+.foot{padding-block:40px 60px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line-soft)}
+.foot h4{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.foot ul{margin:0;padding-left:1.1em;display:grid;gap:5px}
+.foot .stampline{margin-top:26px;padding-top:16px;border-top:1px solid var(--line-soft)}
+
+@media (max-width:560px){
+  .route-stop{grid-template-columns:52px 1fr;gap:12px}
+  .route-move{padding-left:82px}
+  .stop{grid-template-columns:46px 1fr;gap:12px}
+  .stop::before{left:53px}
+  .stop::after{left:49px}
+  .stop--mark::after{left:48px}
+  .stop-body{padding-left:18px}
+  .flight{grid-template-columns:auto 1fr;row-gap:2px}
+  .flight .dur{grid-column:2;font-size:.72rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  .steam{animation:drift 9s ease-in-out infinite}
+  .steam.b{animation-duration:11s;animation-delay:-3s}
+  .steam.c{animation-duration:13s;animation-delay:-6s}
+  @keyframes drift{
+    0%,100%{transform:translateY(0);opacity:.5}
+    50%{transform:translateY(-9px);opacity:.85}
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ════ 표지 ════ -->
+<header class="cover">
+  <img class="ph cover-photo" src="img/kinosaki-yukata.jpg" alt="기노사키온천 거리를 유카타 차림으로 걷는 사람들" width="1280" height="852">
+  <div class="wrap cover-inner">
+    <p class="eyebrow">2026년 가을, 세 식구</p>
+    <h1>간사이 3박4일<br><span class="thin">오사카 · 기노사키온천 · 교토</span></h1>
+    <p class="lede">남쪽 오사카에서 북쪽 바다 온천 마을로 올라갔다가, 교토로 내려와 공항으로 빠지는 한 바퀴. 이동은 전부 기차.</p>
+
+    <div class="stamp">
+      <span class="d">2026.09.30 &ndash; 10.03</span>
+      <span class="n">3박 4일</span>
+    </div>
+
+    <div class="flights">
+      <div class="flight">
+        <span class="code">RS0711</span>
+        <span class="leg">인천 07:15 &rarr; 간사이 09:05</span>
+        <span class="dur">1시간 50분</span>
+      </div>
+      <div class="flight">
+        <span class="code">RS0714</span>
+        <span class="leg">간사이 16:15 &rarr; 인천 18:25</span>
+        <span class="dur">2시간 10분</span>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main>
+
+<!-- ════ 노선 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>한 바퀴 노선</h2>
+    <span class="note">지리적으로 최단 — 되돌아가는 구간이 없다</span>
+  </div>
+
+  <div class="route">
+    <div class="route-stop">
+      <span class="route-day">9/30 수</span>
+      <div>
+        <div class="route-place">간사이공항 도착</div>
+        <div class="route-desc">아침 9시 5분 착륙. 여기서부터 기차만 탄다.</div>
+      </div>
+    </div>
+    <div class="route-move">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/><circle cx="9" cy="13" r=".6" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r=".6" fill="currentColor" stroke="none"/></svg>
+      <span>특급 하루카 또는 난카이</span><span class="mono">약 60분</span>
+    </div>
+
+    <div class="route-stop">
+      <span class="route-day">9/30 수</span>
+      <div>
+        <div class="route-place">오사카 &mdash; 1박</div>
+        <div class="route-desc">도톤보리 먹거리, 신사이바시 쇼핑, 야경</div>
+      </div>
+    </div>
+    <div class="route-move">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/><circle cx="9" cy="13" r=".6" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r=".6" fill="currentColor" stroke="none"/></svg>
+      <span>특급 코노토리 &mdash; 신오사카에서 북쪽 바다까지</span><span class="mono">약 2시간 45분</span>
+    </div>
+
+    <div class="route-stop">
+      <span class="route-day">10/1 목</span>
+      <div>
+        <div class="route-place">기노사키온천 &mdash; 1박</div>
+        <div class="route-desc">유카타 입고 마을 온천 순례, 료칸 가이세키</div>
+      </div>
+    </div>
+    <div class="route-move">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/><circle cx="9" cy="13" r=".6" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r=".6" fill="currentColor" stroke="none"/></svg>
+      <span>특급 키노사키 &mdash; 일부 편은 후쿠치야마 환승</span><span class="mono">약 2시간 20분</span>
+    </div>
+
+    <div class="route-stop">
+      <span class="route-day">10/2 금</span>
+      <div>
+        <div class="route-place">교토 &mdash; 1박</div>
+        <div class="route-desc">기요미즈데라, 기온 거리, 니시키시장</div>
+      </div>
+    </div>
+    <div class="route-move">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/><circle cx="9" cy="13" r=".6" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r=".6" fill="currentColor" stroke="none"/></svg>
+      <span>특급 하루카 &mdash; 교토역에서 공항 직행</span><span class="mono">약 75분</span>
+    </div>
+
+    <div class="route-stop">
+      <span class="route-day">10/3 토</span>
+      <div>
+        <div class="route-place">간사이공항 출발</div>
+        <div class="route-desc">오후 4시 15분 이륙</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 지도 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>지도로 보면</h2>
+    <span class="note">기노사키는 반대편 바다까지 올라간다 &mdash; 이게 이 일정의 핵심</span>
+  </div>
+
+  <div class="mapbox">
+  <svg class="map" viewBox="0 0 600 560" role="img" aria-label="간사이 지방 이동 경로 개략도">
+    <rect class="land" x="0" y="0" width="600" height="560"/>
+
+    <!-- 동해 -->
+    <path class="sea" d="M0 0 H600 V96 C460 92 300 70 150 58 C100 54 50 48 0 46 Z"/>
+    <path class="searim" d="M600 96 C460 92 300 70 150 58 C100 54 50 48 0 46"/>
+    <text class="waters" x="250" y="30">동해</text>
+
+    <!-- 오사카만 -->
+    <path class="sea" d="M0 300 C90 330 180 350 245 390 C300 435 330 500 340 560 H0 Z"/>
+    <path class="searim" d="M0 300 C90 330 180 350 245 390 C300 435 330 500 340 560"/>
+    <text class="waters" x="60" y="470">오사카만</text>
+
+    <!-- 북쪽 표시 -->
+    <g stroke="var(--muted)" fill="none" stroke-width="2" stroke-linecap="round" opacity=".6">
+      <path d="M560 78 V44"/><path d="M552 54 L560 44 L568 54"/>
+    </g>
+    <text class="sub" x="560" y="98" text-anchor="middle">북</text>
+
+    <!-- 구간 -->
+    <path class="leg" d="M259 468 Q285 410 356 390"/>
+    <path class="leg" d="M356 390 Q180 330 98 82"/>
+    <path class="leg" d="M98 82 Q300 120 457 280"/>
+    <path class="leg" d="M457 280 Q420 430 259 468"/>
+
+    <!-- 구간 번호·소요시간 -->
+    <g>
+      <circle class="badge" cx="296" cy="420" r="13"/>
+      <text class="badgetx" x="296" y="425">1</text>
+      <text class="legname" x="316" y="425">하루카 <tspan class="legtime">60분</tspan></text>
+    </g>
+    <g>
+      <circle class="badge" cx="204" cy="283" r="13"/>
+      <text class="badgetx" x="204" y="288">2</text>
+      <text class="legname" x="224" y="288">코노토리 <tspan class="legtime">2시간 45분</tspan></text>
+    </g>
+    <g>
+      <circle class="badge" cx="289" cy="151" r="13"/>
+      <text class="badgetx" x="289" y="156">3</text>
+      <text class="legname" x="309" y="156">키노사키 <tspan class="legtime">2시간 20분</tspan></text>
+    </g>
+    <g>
+      <circle class="badge" cx="389" cy="402" r="13"/>
+      <text class="badgetx" x="389" y="407">4</text>
+      <text class="legname" x="409" y="407">하루카 <tspan class="legtime">75분</tspan></text>
+    </g>
+
+    <!-- 기노사키온천 -->
+    <circle class="dot dot--yu" cx="98" cy="82" r="9"/>
+    <text class="place place--yu" x="118" y="78">기노사키온천</text>
+    <text class="sub" x="118" y="98">10/1 · 외탕 · 료칸</text>
+
+    <!-- 교토 -->
+    <circle class="dot" cx="457" cy="280" r="9"/>
+    <text class="place" x="457" y="256" text-anchor="middle">교토</text>
+    <text class="sub" x="457" y="304" text-anchor="middle">10/2 · 기요미즈 · 기온</text>
+
+    <!-- 오사카 -->
+    <circle class="dot" cx="356" cy="390" r="9"/>
+    <text class="place" x="338" y="382" text-anchor="end">오사카</text>
+    <text class="sub" x="338" y="362" text-anchor="end">9/30 · 도톤보리</text>
+
+    <!-- 간사이공항 -->
+    <rect class="dot--air" x="250" y="459" width="18" height="18" rx="3"/>
+    <text class="place" x="279" y="465">간사이공항</text>
+    <text class="sub" x="279" y="485">9/30 도착 · 10/3 출발</text>
+  </svg>
+  </div>
+  <p class="mapnote">위치 관계를 보여주는 개략도 &mdash; 해안선은 실제와 다르다. 도시 위치와 방향은 실제 좌표대로.</p>
+</section>
+
+<!-- ════ 먼저 예약 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>이건 먼저 잡아야 한다</h2>
+    <span class="note">출발까지 남은 시간이 줄어들수록 선택지가 사라지는 것들</span>
+  </div>
+
+  <div class="alert">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.4v.2"/></svg>
+    <div>
+      <h3>세 가지가 서로 묶여 있다</h3>
+      <p>료칸을 못 잡으면 날짜가 흔들리고, 날짜가 흔들리면 특급 좌석도 다시 잡아야 한다. 순서대로.</p>
+      <ol>
+        <li><strong>기노사키 료칸</strong> &mdash; 마을 전체가 작아서 방이 금방 찬다. 3인 1실 + 가이세키 저녁 포함으로.</li>
+        <li><strong>특급 지정석 2구간</strong> &mdash; 코노토리·키노사키는 하루 여섯 왕복뿐. 캐리어 3개라 자유석은 위험하다.</li>
+        <li><strong>JR 간사이 와이드 패스</strong> &mdash; 온라인에서 미리 사고 공항에서 받는다.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 숙소 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>어디서 자나</h2>
+    <span class="note">셋이 한 방 &mdash; 일본 호텔은 2인실이 기본이라 트리플룸 있는 곳으로 골라야 한다</span>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>기노사키 료칸 &mdash; 10/1(목) 1박, 가이세키 저녁 포함으로</caption>
+      <thead><tr><th scope="col">료칸</th><th scope="col">어떤 곳</th><th scope="col">이 집이 맞는 경우</th></tr></thead>
+      <tbody>
+        <tr><td><b>니시무라야 쇼게츠테이</b></td><td>혼칸의 자매 료칸. 현대적 호텔 설비를 다 갖췄고 혼칸보다 저렴</td><td class="ok">가족 3인엔 여기가 무난</td></tr>
+        <tr><td><b>타지마야</b></td><td>무료로 쓰는 전세탕 3개가 있다</td><td class="ok">가족끼리만 탕을 쓰고 싶으면</td></tr>
+        <tr><td>니시무라야 혼칸</td><td>160년 역사. 정통 가이세키, 접시 하나하나가 작품</td><td>제대로 격식 차리고 싶으면 (비쌈)</td></tr>
+        <tr><td>모리츠야</td><td>단골이 많은 집. 환대가 좋다는 평</td><td>사람 대접받는 느낌을 중시하면</td></tr>
+        <tr><td>야마모토야</td><td>수제맥주 레스토랑 GUBIGABU가 붙어 있다</td><td>저녁에 맥주 한잔 하고 싶으면</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tablewrap" style="margin-top:16px">
+    <table>
+      <caption>오사카 9/30(수) · 교토 10/2(금) &mdash; 3인 1실 되는 곳</caption>
+      <thead><tr><th scope="col">도시</th><th scope="col">호텔</th><th scope="col">고른 이유</th></tr></thead>
+      <tbody>
+        <tr><td>오사카</td><td><b>온야도 노노 난바 천연온천</b></td><td class="ok">대욕장·사우나가 있다. 첫날 비행기 피로 풀기 좋고, 3인 1실 10&ndash;15만원대</td></tr>
+        <tr><td>오사카</td><td>난바 오리엔탈 호텔</td><td>도톤보리까지 걸어간다. 위치 대비 가격이 괜찮은 편</td></tr>
+        <tr><td>오사카</td><td>프레이저 레지던스 난카이</td><td>객실이 넓고 주방·세탁기가 있다. 난바역 도보</td></tr>
+        <tr><td>교토</td><td><b>호텔 비스키오 교토</b></td><td class="ok">시몬스 침대 3대짜리 진짜 트리플룸. 교토역 가까워 마지막 날 공항 이동이 쉽다</td></tr>
+        <tr><td>교토</td><td>호텔 게이한 교토 그란데</td><td>교토역과 지하로 직결. 가족 투숙객 비율이 높고 커넥팅룸도 있다</td></tr>
+        <tr><td>교토</td><td>교토 타워 호텔 아넥스</td><td>교토역 도보 5분. 조식 뷔페·짐 보관</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert" style="margin-top:18px">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.4v.2"/></svg>
+    <div>
+      <h3>가격과 빈방은 직접 봐야 한다</h3>
+      <p>여기 적은 건 어떤 집인지까지다. <b>9/30&ndash;10/3 실제 빈방과 요금</b>은 예약 사이트에서 날짜를 넣어야 나온다. 기노사키는 마을 전체 객실 수가 적어서 먼저 확인할 것.</p>
+      <ol>
+        <li><a href="https://visitkinosaki.com/stay/">기노사키 공식 숙소 목록 &mdash; Visit Kinosaki</a></li>
+        <li><a href="https://travel.rakuten.com/contents/kor/ko-kr/guide/ryokan-kinosaki/">기노사키 료칸 10선 &mdash; 라쿠텐 트래블</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 하루하루 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>하루하루</h2>
+    <span class="note">시각은 목표치 &mdash; 앞뒤로 30분씩은 여유가 있다</span>
+  </div>
+
+  <!-- Day 1 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-no">DAY 1</span>
+      <h3>도착하자마자 도톤보리</h3>
+      <span class="date">9/30 수</span>
+    </div>
+    <img class="ph day-photo" src="img/dotonbori.jpg" alt="도톤보리 밤거리의 네온 간판" width="1280" height="720" loading="lazy">
+    <ol class="rail">
+      <li class="stop stop--mark">
+        <span class="stop-time">09:05</span>
+        <div class="stop-body">
+          <div class="stop-title">간사이공항 착륙</div>
+          <p class="stop-note">입국 심사와 위탁 수하물까지 넉넉히 <b>한 시간</b>. 서둘러도 10시다.</p>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">10:00</span>
+        <div class="stop-body">
+          <div class="stop-title">JR 패스 받고 개시</div>
+          <p class="stop-note">공항역 JR 매표소에서 교환. <b>이 순간부터 5일</b>이 카운트된다. 같이 <b>지정석 좌석표</b>도 받아둘 것 &mdash; 내일 코노토리 좌석이 여기서 확정된다.</p>
+          <div class="tags"><span class="tag">JR 매표소</span><span class="tag tag--pick">ICOCA도 여기서 충전</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">11:00</span>
+        <div class="stop-body">
+          <div class="stop-title">오사카 시내로</div>
+          <p class="stop-note">특급 하루카를 타면 텐노지·신오사카 방면, 난카이 라피트를 타면 난바 직행. <b>숙소가 난바 쪽이면 난카이</b>가 편하고, 우메다 쪽이면 하루카다.</p>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">12:00</span>
+        <div class="stop-body">
+          <div class="stop-title">호텔에 짐만 맡기고 점심</div>
+          <p class="stop-note">체크인은 보통 오후 3시라 짐만 맡긴다. 바로 <b>도톤보리</b>로.</p>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time soft">오후</span>
+        <div class="stop-body">
+          <div class="stop-title">셋이서 하나 고르기</div>
+          <p class="stop-note">첫날부터 무리하지 말고 하나만. 딸 취향으로 정하는 게 제일 낫다.</p>
+          <div class="tags">
+            <span class="tag tag--pick">신사이바시 쇼핑거리</span>
+            <span class="tag">오사카성</span>
+            <span class="tag">우메다 스카이빌딩 공중정원</span>
+          </div>
+          <div class="stop-photo"><img class="ph" src="img/osaka-castle.jpg" alt="오사카성 천수각" width="1280" height="960" loading="lazy"></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time soft">저녁</span>
+        <div class="stop-body">
+          <div class="stop-title">글리코 간판 켜지는 시간</div>
+          <p class="stop-note">해 지고 나면 도톤보리 강변 네온이 본판이다. 저녁은 <b>쿠시카츠</b> &mdash; 소스에 두 번 찍으면 안 된다는 그 집들.</p>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time soft">숙박</span>
+        <div class="stop-body">
+          <div class="stop-title">오사카 &mdash; 난바 또는 우메다</div>
+          <p class="stop-note">3인 1실 되는 비즈니스호텔. 내일 아침 <b>신오사카역</b>으로 나가기 편한 위치가 유리하다.</p>
+        </div>
+      </li>
+    </ol>
+  </article>
+
+  <!-- Day 2 -->
+  <article class="day day--yu">
+    <div class="day-head">
+      <span class="day-no">DAY 2</span>
+      <h3>바다 쪽 온천 마을로 올라간다</h3>
+      <span class="date">10/1 목</span>
+    </div>
+    <img class="ph day-photo" src="img/konotori.jpg" alt="기노사키온센역에 정차한 특급 코노토리" width="1280" height="720" loading="lazy">
+    <ol class="rail">
+      <li class="stop stop--mark">
+        <span class="stop-time">09:00</span>
+        <div class="stop-body">
+          <div class="stop-title">체크아웃 &rarr; 신오사카역</div>
+          <p class="stop-note">캐리어 3개를 끌고 움직이는 날. 특급 짐칸 위치를 미리 알아두면 편하다.</p>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">09:30</span>
+        <div class="stop-body">
+          <div class="stop-title">특급 코노토리 탑승</div>
+          <p class="stop-note">약 <b>2시간 45분</b>. 도시가 사라지고 논밭과 산이 이어지다가 바다 냄새 나는 마을이 나온다. 도시락 사서 타면 딱이다.</p>
+          <div class="tags"><span class="tag tag--pick">JR 패스로 지정석 커버</span></div>
+        </div>
+      </li>
+      <li class="stop stop--mark">
+        <span class="stop-time">12:15</span>
+        <div class="stop-body">
+          <div class="stop-title">기노사키온센역 도착</div>
+          <p class="stop-note">역에서 온천 거리까지 걸어서 몇 분. 골목이 좁아 캐리어 소리가 크게 난다.</p>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">13:00</span>
+        <div class="stop-body">
+          <div class="stop-title">료칸에 짐 맡기고 유카타로 갈아입기</div>
+          <p class="stop-note">여기서는 <b>유카타가 외출복</b>이다. 게타 신고 온천 거리를 걸어다니는 게 이 마을의 방식.</p>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">13:30</span>
+        <div class="stop-body">
+          <div class="stop-title">외탕 순례 시작</div>
+          <p class="stop-note">일곱 개 공중탕이 마을에 흩어져 있고, <b>료칸 숙박객은 전부 무료</b>다. 다만 이 날은 두 곳이 쉰다 &mdash; 아래 표로.</p>
+          <div class="tags"><span class="tag tag--warn">10/1은 야나기유·고쇼노유 휴무</span><span class="tag">나머지 5탕 가능</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">15:00</span>
+        <div class="stop-body">
+          <div class="stop-title">로프웨이로 마을 내려다보기</div>
+          <p class="stop-note">7분이면 산 정상. 중간역에서 내리면 <b>온센지</b>가 있다. 왕복 어른 &yen;1,200 · 어린이 &yen;600, 운행은 <b>9:10&ndash;16:50</b>.</p>
+          <div class="tags"><span class="tag">둘째·넷째 목요일 정비 휴업</span><span class="tag tag--pick">10/1은 첫째 목요일이라 정상 운행</span></div>
+        </div>
+      </li>
+      <li class="stop stop--mark">
+        <span class="stop-time">18:00</span>
+        <div class="stop-body">
+          <div class="stop-title">료칸 가이세키</div>
+          <p class="stop-note">이 여행의 제일 좋은 저녁. 메인은 <b>타지마규</b> &mdash; 고베규의 원래 혈통이다. 스테이크나 스키야키로 나온다.</p>
+          <div class="tags"><span class="tag tag--warn">게는 11월 6일부터 &mdash; 10월엔 없다</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time soft">밤</span>
+        <div class="stop-body">
+          <div class="stop-title">한 번 더, 이번엔 밤 온천</div>
+          <p class="stop-note">대부분 <b>밤 11시까지</b>. 등불 켜진 버드나무 냇가를 유카타로 걷는 게 여기 온 이유다.</p>
+        </div>
+      </li>
+    </ol>
+  </article>
+
+  <!-- Day 3 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-no">DAY 3</span>
+      <h3>온천에서 곧장 교토로</h3>
+      <span class="date">10/2 금</span>
+    </div>
+    <img class="ph day-photo" src="img/kiyomizu.jpg" alt="단풍에 둘러싸인 기요미즈데라 나무 무대" width="1280" height="720" loading="lazy">
+    <ol class="rail">
+      <li class="stop">
+        <span class="stop-time">07:00</span>
+        <div class="stop-body">
+          <div class="stop-title">아침 온천 한 탕</div>
+          <p class="stop-note">아침 7시에 여는 곳은 <b>고노유·이치노유·고쇼노유</b>. 금요일이라 <b>지조유는 쉰다</b>.</p>
+          <div class="tags"><span class="tag tag--warn">10/2 지조유 휴무</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">10:30</span>
+        <div class="stop-body">
+          <div class="stop-title">특급 키노사키 탑승</div>
+          <p class="stop-note">약 <b>2시간 20분</b>. 편에 따라 <b>후쿠치야마에서 갈아탄다</b> &mdash; 예약할 때 직통인지 확인할 것.</p>
+        </div>
+      </li>
+      <li class="stop stop--mark">
+        <span class="stop-time">13:00</span>
+        <div class="stop-body">
+          <div class="stop-title">교토 도착, 호텔에 짐</div>
+          <p class="stop-note">숙소는 <b>교토역</b>이나 <b>시조카와라마치</b>. 마지막 날 아침 공항 이동을 생각하면 교토역이 안전하다.</p>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">14:30</span>
+        <div class="stop-body">
+          <div class="stop-title">기요미즈데라</div>
+          <p class="stop-note">언덕 위 나무 무대에서 교토 시내가 한눈에 들어온다. <b>6:00&ndash;18:00</b>, 어른 &yen;400&ndash;500 &mdash; <b>현금만 받는다</b>.</p>
+          <div class="tags"><span class="tag tag--warn">카드 안 됨 · 엔화 현금 챙기기</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">16:00</span>
+        <div class="stop-body">
+          <div class="stop-title">산넨자카 내려와 기온까지</div>
+          <p class="stop-note">돌계단 길에 기념품 가게가 이어진다. 아래로 계속 걸으면 <b>기온</b> &mdash; 해 질 무렵 게이샤가 지나가는 그 거리.</p>
+          <div class="tags"><span class="tag tag--pick">기모노 대여하고 걸으면 사진이 다르다</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">17:00</span>
+        <div class="stop-body">
+          <div class="stop-title">니시키시장 &mdash; 서두를 것</div>
+          <p class="stop-note">400년 된 지붕 덮인 먹자골목. 문제는 <b>대부분 6시에 닫는다</b>는 것. 늦으면 내일로 미루지 말고 오늘 포기하는 게 낫다.</p>
+          <div class="tags"><span class="tag tag--warn">18:00 마감</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time soft">저녁</span>
+        <div class="stop-body">
+          <div class="stop-title">가와라마치 &middot; 폰토초</div>
+          <p class="stop-note">강 옆 좁은 골목에 등불이 줄줄이 켜진다. 교토식 두부 요리나 이자카야.</p>
+        </div>
+      </li>
+    </ol>
+  </article>
+
+  <!-- Day 4 -->
+  <article class="day">
+    <div class="day-head">
+      <span class="day-no">DAY 4</span>
+      <h3>토리이 터널 보고 공항으로</h3>
+      <span class="date">10/3 토</span>
+    </div>
+    <img class="ph day-photo" src="img/fushimi.jpg" alt="후시미이나리타이샤의 붉은 토리이 터널" width="1280" height="720" loading="lazy">
+    <ol class="rail">
+      <li class="stop stop--mark">
+        <span class="stop-time">07:30</span>
+        <div class="stop-body">
+          <div class="stop-title">후시미이나리타이샤</div>
+          <p class="stop-note">붉은 토리이가 산길을 따라 천 개 넘게 이어진다. <b>24시간 개방 · 무료</b>. 교토역에서 나라선으로 <b>두 정거장</b>. 이 시간대가 유일하게 사람이 없는 때다.</p>
+          <div class="tags"><span class="tag tag--pick">토요일이라 아침에 안 가면 인파에 밀린다</span><span class="tag">JR 패스로 이동 가능</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">10:00</span>
+        <div class="stop-body">
+          <div class="stop-title">호텔 체크아웃, 남은 시간 정리</div>
+          <p class="stop-note">짐 찾고 교토역 근처에서 마지막 쇼핑이나 점심. <b>여유 있으면 여기서 끝내는 게 좋다.</b></p>
+        </div>
+      </li>
+      <li class="stop stop--mark">
+        <span class="stop-time">12:30</span>
+        <div class="stop-body">
+          <div class="stop-title">교토역 &rarr; 하루카 (마지노선)</div>
+          <p class="stop-note">약 <b>75분</b>. 이 시각을 넘기면 국제선 두 시간 전 도착이 깨진다. <b>여기가 오늘의 유일한 마감이다.</b></p>
+          <div class="tags"><span class="tag tag--warn">12:30 넘기지 말 것</span></div>
+        </div>
+      </li>
+      <li class="stop">
+        <span class="stop-time">14:00</span>
+        <div class="stop-body">
+          <div class="stop-title">간사이공항</div>
+          <p class="stop-note">체크인, 남은 엔화 털기, 면세점.</p>
+        </div>
+      </li>
+      <li class="stop stop--mark">
+        <span class="stop-time">16:15</span>
+        <div class="stop-body">
+          <div class="stop-title">RS0714 이륙 &rarr; 18:25 인천</div>
+          <p class="stop-note">저녁 6시 반이면 한국이다.</p>
+        </div>
+      </li>
+    </ol>
+  </article>
+</section>
+
+<!-- ════ 외탕 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>기노사키 외탕 일곱 곳</h2>
+    <span class="note">료칸 숙박객 무료 &mdash; 우리 날짜에 열려 있는지까지 표시</span>
+  </div>
+
+  <figure class="figure">
+    <img class="ph" src="img/hero-kinosaki.jpg" alt="버드나무가 늘어선 기노사키온천 거리" width="1280" height="720" loading="lazy">
+    <figcaption>버드나무 늘어선 개울을 따라 외탕이 흩어져 있다. 유카타에 게타 신고 걸어서 돈다.</figcaption>
+  </figure>
+
+  <div class="tablewrap">
+    <table>
+      <caption>10/1(목) 오후 도착 &middot; 10/2(금) 오전 출발 기준</caption>
+      <thead>
+        <tr>
+          <th scope="col">외탕</th>
+          <th scope="col" class="rt">영업시간</th>
+          <th scope="col">쉬는 날</th>
+          <th scope="col">10/1 목</th>
+          <th scope="col">10/2 아침</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>고노유</td><td class="num">07:00&ndash;23:00</td><td>화요일</td><td class="ok">가능</td><td class="ok">가능</td></tr>
+        <tr><td>이치노유</td><td class="num">07:00&ndash;23:00</td><td>수요일</td><td class="ok">가능</td><td class="ok">가능</td></tr>
+        <tr><td>고쇼노유</td><td class="num">07:00&ndash;23:00</td><td>제1·3 목요일</td><td class="no">휴무</td><td class="ok">가능</td></tr>
+        <tr><td>지조유</td><td class="num">07:00&ndash;23:00</td><td>금요일</td><td class="ok">가능</td><td class="no">휴무</td></tr>
+        <tr><td>만다라유</td><td class="num">15:00&ndash;23:00</td><td>수요일</td><td class="ok">오후부터</td><td class="no">아직 닫힘</td></tr>
+        <tr><td>야나기유</td><td class="num">15:00&ndash;23:00</td><td>목요일</td><td class="no">휴무</td><td class="no">아직 닫힘</td></tr>
+        <tr><td>사토노유</td><td class="num">13:00&ndash;21:00</td><td>월요일</td><td class="ok">가능</td><td class="no">아직 닫힘</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:14px;font-size:.86rem;color:var(--muted)">
+    현실적으로 <b style="color:var(--ink)">10/1 오후·밤에 3&ndash;4탕, 10/2 아침에 1탕</b>이 적당하다. 욕심내면 저녁 가이세키 시간을 놓친다.
+  </p>
+</section>
+
+<!-- ════ 먹거리 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>뭘 먹나</h2>
+    <span class="note">웨이팅 긴 집은 표시해뒀다</span>
+  </div>
+
+  <div class="cards">
+    <div class="card card--art">
+      <div class="card-art" style="height:auto"><img class="ph card-photo" src="img/okonomiyaki.jpg" alt="소스와 마요네즈를 두른 오코노미야키" width="1200" height="800" loading="lazy"></div>
+      <div class="card-body">
+        <h4>쿠레오루</h4>
+        <p class="where">도톤보리 · 난바역 도보 5분</p>
+        <p>오코노미야키·타코야키·쿠시카츠를 <b>한자리에서 다</b> 먹을 수 있다. 첫날 점심에 오사카 명물을 한 번에 훑기 좋은 집.</p>
+        <p class="menu"><b>부타타마</b> 돼지고기 · <b>이카타마</b> 오징어 · <b>에비타마</b> 새우</p>
+      </div>
+    </div>
+
+    <div class="card card--art">
+      <div class="card-art" style="height:auto"><img class="ph card-photo" src="img/takoyaki.jpg" alt="철판에서 구워지는 타코야키" width="1200" height="900" loading="lazy"></div>
+      <div class="card-body">
+        <h4>도톤보리 아카오니</h4>
+        <p class="where">도톤보리 · 타코야키</p>
+        <p>생문어를 쓰는 타코야키 노포. <b>미슐랭 가이드에 3년 연속</b>(2016&ndash;2018) 이름을 올렸다.</p>
+        <p class="menu">길에서 서서 먹는 게 제맛 &mdash; 갓 나온 건 입천장 조심</p>
+      </div>
+    </div>
+
+    <div class="card card--art">
+      <div class="card-art" style="height:auto"><img class="ph card-photo" src="img/kushikatsu.jpg" alt="바구니에 담긴 쿠시카츠 꼬치와 소스 통" width="1200" height="900" loading="lazy"></div>
+      <div class="card-body">
+        <h4>쿠시카츠 &mdash; 저녁</h4>
+        <p class="where">도톤보리 · 신세카이</p>
+        <p>튀김 꼬치를 공용 소스 통에 담가 먹는다. <b>소스에 두 번 찍으면 안 된다</b> &mdash; 딸한테 미리 알려줄 것. 양배추는 무한 리필.</p>
+        <p class="menu">다루마 · 쿠시카츠 타나카 등 체인이 실패가 없다</p>
+      </div>
+    </div>
+
+    <div class="card card--art card--yu">
+      <div class="card-art" style="height:auto"><img class="ph card-photo" src="img/tajima-beef.jpg" alt="철판에 구워지는 타지마규 스테이크" width="1200" height="800" loading="lazy"></div>
+      <div class="card-body">
+        <h4>료칸 가이세키</h4>
+        <p class="where">기노사키온천 · 10/1 저녁</p>
+        <p>이 여행에서 제일 잘 먹는 한 끼. 메인은 <b>타지마규</b> &mdash; 고베규의 원래 혈통이다. 스테이크·스키야키·샤브샤브 중 예약할 때 고른다.</p>
+        <p class="menu"><b>게는 11월 6일 해금</b> &mdash; 10월 초에는 안 나온다</p>
+      </div>
+    </div>
+
+    <div class="card card--art">
+      <div class="card-art" style="height:auto"><img class="ph card-photo" src="img/nishiki.jpg" alt="니시키시장에서 파는 구운 오징어" width="1200" height="675" loading="lazy"></div>
+      <div class="card-body">
+        <h4>니시키시장</h4>
+        <p class="where">교토 · 10/2 오후</p>
+        <p>지붕 덮인 400m 먹자골목. 비 와도 상관없다. 구운 오징어, 장어, 두부, 절임 &mdash; 조금씩 사서 걸으며 먹는다.</p>
+        <p class="menu"><b>대부분 6시에 닫는다</b> &mdash; 교토 도착하면 바로 붙일 것</p>
+      </div>
+    </div>
+
+    <div class="card card--art">
+      <div class="card-art" style="height:auto"><img class="ph card-photo" src="img/dotonbori.jpg" alt="도톤보리의 게 간판과 네온" width="1200" height="675" loading="lazy"></div>
+      <div class="card-body">
+        <h4>이치아키 &mdash; 셋이 나눠 먹기</h4>
+        <p class="where">도톤보리 · 철판구이</p>
+        <p>세 식구가 하나 시켜 나눠 먹기 제일 편한 집. <b>패밀리 세트 하나면 저녁이 해결된다.</b></p>
+        <p class="menu"><b>세트 &yen;3,950</b> &mdash; 샐러드 + 믹스 철판구이 + 야키소바 + 오코노미야키</p>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:14px;font-size:.86rem;color:var(--muted)">
+    <b style="color:var(--ink)">아지노야 혼텐</b>은 오코노미야키 노포로 유명하지만 <b style="color:var(--ink)">기본 1&ndash;2시간 웨이팅</b>이라 딸이 지친다. 줄 서기 싫으면 위 집들로.
+  </p>
+</section>
+
+<!-- ════ 교통 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>기차표는 이거 하나로</h2>
+    <span class="note">JR 간사이 와이드 에어리어 패스 5일권</span>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>따로 사는 것과 패스를 쓰는 것의 차이</caption>
+      <thead>
+        <tr><th scope="col">구간</th><th scope="col">타는 열차</th><th scope="col">패스 적용</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>간사이공항 &rarr; 오사카</td><td>특급 하루카</td><td class="ok">지정석까지 포함</td></tr>
+        <tr><td>신오사카 &rarr; 기노사키온천</td><td>특급 코노토리</td><td class="ok">지정석까지 포함</td></tr>
+        <tr><td>기노사키온천 &rarr; 교토</td><td>특급 키노사키</td><td class="ok">지정석까지 포함</td></tr>
+        <tr><td>교토 &rarr; 간사이공항</td><td>특급 하루카</td><td class="ok">지정석까지 포함</td></tr>
+        <tr><td>교토역 &rarr; 후시미이나리</td><td>JR 나라선</td><td class="ok">포함</td></tr>
+        <tr><td>오사카·교토 시내 이동</td><td>지하철 · 한큐 · 게이한 · 버스</td><td class="no">안 됨 &mdash; ICOCA로</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cards" style="margin-top:16px">
+    <div class="card">
+      <div class="card-top">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 14h4"/></svg>
+        <h4>&yen;12,000 &times; 3명</h4>
+      </div>
+      <p>따로 사면 1인 약 <b>&yen;17,000</b>이 나온다. 패스 쓰면 <b>1인 5,000엔쯤 아낀다.</b></p>
+      <p class="menu"><b>중학생은 어린이 요금이 아니다</b> &mdash; JR 어린이는 6&ndash;11세. 딸도 어른 패스로 세 장.</p>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg>
+        <h4>5일권인데 4일 일정</h4>
+      </div>
+      <p>9월 30일에 개시하면 <b>10월 4일까지</b> 유효하다. 하루가 남으니 일정이 밀려도 표가 죽지 않는다.</p>
+      <p class="menu">온라인(클룩·공식)에서 사고 <b>공항 도착 후 교환</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 예산 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>돈이 얼마나 드나</h2>
+    <span class="note">세 사람 합계 · 항공권은 이미 끊었으니 제외</span>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>&yen;100 &asymp; &#8361;920 가정 &mdash; 결제 시점 환율에 따라 달라진다</caption>
+      <thead>
+        <tr><th scope="col">항목</th><th scope="col">내용</th><th scope="col" class="rt">엔</th><th scope="col" class="rt">원</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>JR 패스</td><td>&yen;12,000 &times; 3</td><td class="num">36,000</td><td class="num">331,000</td></tr>
+        <tr><td>시내 교통</td><td>ICOCA &yen;3,000 &times; 3</td><td class="num">9,000</td><td class="num">83,000</td></tr>
+        <tr><td>오사카 1박</td><td>비즈니스호텔 3인</td><td class="num">18,000</td><td class="num">166,000</td></tr>
+        <tr><td>기노사키 료칸 1박</td><td>가이세키 포함 · 1인 &yen;22,000</td><td class="num">66,000</td><td class="num">607,000</td></tr>
+        <tr><td>교토 1박</td><td>3인</td><td class="num">25,000</td><td class="num">230,000</td></tr>
+        <tr><td>식비</td><td>3인 &times; 4일 · 점심·저녁 중심</td><td class="num">60,000</td><td class="num">552,000</td></tr>
+        <tr><td>입장료·체험</td><td>기요미즈데라 · 로프웨이 · 오사카성 등</td><td class="num">15,000</td><td class="num">138,000</td></tr>
+        <tr><td>기타</td><td>간식 · 기념품 · 예비비</td><td class="num">30,000</td><td class="num">276,000</td></tr>
+        <tr class="total"><td>합계</td><td>항공 제외</td><td class="num">259,000</td><td class="num">2,383,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:14px;font-size:.86rem;color:var(--muted)">
+    료칸 등급이 제일 큰 변수라 <b style="color:var(--ink)">위아래로 30%</b>는 움직인다. 줄이려면 료칸 등급을 낮추고, 늘리려면 유니버설 스튜디오를 하루 넣으면 된다.
+  </p>
+</section>
+
+<!-- ════ 챙길 것 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>떠나기 전 챙길 것</h2>
+  </div>
+  <ul class="checks">
+    <li><span class="box"></span><div><div class="t">기노사키 료칸 예약</div><div class="s">3인 1실 · 가이세키 저녁 포함 · 마을이 작아 방이 금방 찬다</div></div></li>
+    <li><span class="box"></span><div><div class="t">특급 지정석 두 구간</div><div class="s">코노토리(오사카&rarr;기노사키) · 키노사키(기노사키&rarr;교토) &mdash; 하루 여섯 왕복뿐</div></div></li>
+    <li><span class="box"></span><div><div class="t">JR 간사이 와이드 패스 3장</div><div class="s">온라인 구매 &rarr; 공항 도착해서 교환 · 딸도 어른 요금</div></div></li>
+    <li><span class="box"></span><div><div class="t">오사카·교토 숙소</div><div class="s">3인 1실 가능한 곳으로 &mdash; 일본 호텔은 2인실이 기본이라 미리 확인</div></div></li>
+    <li><span class="box"></span><div><div class="t">여권 3장 · 여행자보험</div><div class="s">여권 유효기간 6개월 이상 남았는지</div></div></li>
+    <li><span class="box"></span><div><div class="t">eSIM 또는 포켓와이파이</div><div class="s">셋이 쓰면 eSIM 각자가 편하다</div></div></li>
+    <li><span class="box"></span><div><div class="t">엔화 현금</div><div class="s">기요미즈데라는 현금만 · 외탕과 작은 가게도 현금이 안전</div></div></li>
+    <li><span class="box"></span><div><div class="t">캐리어 크기 점검</div><div class="s">기노사키 골목이 좁다 · 특급 짐칸 or 역 코인락커 활용</div></div></li>
+    <li><span class="box"></span><div><div class="t">딸 하고 싶은 것 미리 묻기</div><div class="s">신사이바시 쇼핑 · 교토 기모노 체험 · 후시미이나리 사진 중에</div></div></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  <h4>사진 출처</h4>
+  <p style="margin-bottom:10px">모두 위키미디어 공용의 자유 이용 사진.</p>
+  <ul>
+    <li>기노사키 유카타 거리 &mdash; Mypom9, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Kinosaki_Aruki.jpg">원본</a></li>
+    <li>기노사키 개울 거리 &mdash; Drivephotographer, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Kinosaki_onsen_Kita-yanagi_street.jpg">원본</a></li>
+    <li>도톤보리 밤 &mdash; Tzuhsun Hsu, CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Dotonbori_at_night_2020-01-27_1.jpg">원본</a></li>
+    <li>타코야키 &mdash; Fumikas Sagisavas, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Takoyaki_balls_(1).jpg">원본</a></li>
+    <li>오코노미야키 &mdash; ume-y, CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Okonomiyaki_001.jpg">원본</a></li>
+    <li>쿠시카츠 &mdash; Ajay Suresh, CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Kushikatsu_-_Shinsekai_(28289215848).jpg">원본</a></li>
+    <li>타지마규 &mdash; Nishimuraya Kinosaki Onsen, CC BY 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Tajima_Beef_(21926180356).jpg">원본</a></li>
+    <li>니시키시장 구운 오징어 &mdash; Joli Rumi, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Grilled_squid_served_at_Nishiki_market,_Kyoto,_Japan.jpg">원본</a></li>
+    <li>기요미즈데라 &mdash; Martin Falbisoner, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Kiyomizu-dera,_Kyoto,_November_2016_-01.jpg">원본</a></li>
+    <li>후시미이나리 &mdash; Balon Greyjoy, CC0 · <a href="https://commons.wikimedia.org/wiki/File:20181110_Fushimi_Inari_Torii_12.jpg">원본</a></li>
+    <li>기온 밤거리 &mdash; lumoplank, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Streets_of_Gion,_Kyoto_-_Gion7709.jpg">원본</a></li>
+    <li>오사카성 &mdash; Syced, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Osaka_castle_7.jpg">원본</a></li>
+    <li>특급 코노토리 &mdash; そらみみ, CC BY-SA 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Kinosaki-Onsen_Station_Sign_and_Limited_Express_%22Konotori%22.jpg">원본</a></li>
+  </ul>
+
+  <h4 style="margin-top:26px">확인한 곳</h4>
+  <ul>
+    <li><a href="https://www.westjr.co.jp/global/kr/ticket/pass/kansai_wide/index2.html">JR 간사이 와이드 에어리어 패스 &mdash; JR서일본 공식</a></li>
+    <li><a href="https://visitkinosaki.com/things-to-do/ropeway/">기노사키 로프웨이 &mdash; Visit Kinosaki</a></li>
+    <li><a href="https://travel.rakuten.com/contents/kor/ko-kr/guide/kinosaki-onsen-guide/">기노사키 외탕 일곱 곳 영업시간 &mdash; 라쿠텐 트래블</a></li>
+    <li><a href="https://www.japan.travel/en/ca/news/it-s-snow-crab-season-in-kinosaki-onsen/">마츠바가니 해금일(11/6) &mdash; Japan Travel</a></li>
+    <li><a href="https://travel.rakuten.com/contents/kor/ko-kr/guide/ko-best-takoyaki-osaka/">오사카 타코야키 &mdash; 라쿠텐 트래블</a></li>
+    <li><a href="https://kr.savorjapan.com/contents/discover-oishii-japan/best-okonomiyaki-restaurants-dotonbori-osaka-shinsaibashi-namba">도톤보리 오코노미야키 &mdash; SAVOR JAPAN</a></li>
+    <li><a href="https://www.tripstore.kr/blog/%EA%B8%B0%EC%9A%94%EB%AF%B8%EC%A6%88%EB%8D%B0%EB%9D%BC-%EC%9E%85%EC%9E%A5%EB%A3%8C-%EB%B6%80%EB%AA%A8%EB%8B%98-%EC%98%A4%ED%9B%84-%EB%85%B8%EC%9D%84-%EC%BD%94%EC%8A%A4">기요미즈데라 입장료·시간</a></li>
+    <li><a href="https://www.tripstore.kr/blog/%EA%B5%90%ED%86%A0-%EB%8B%88%EC%8B%9C%ED%82%A4-%EC%8B%9C%EC%9E%A5-%EB%A8%B9%EA%B1%B0%EB%A6%AC-%EC%97%AC%ED%96%89">니시키시장 먹거리</a></li>
+  </ul>
+  <p class="stampline">
+    시각과 요금은 2026년 8월에 확인한 것 &mdash; 출발 전 한 번 더 볼 것.<br>
+    료칸 등급과 환율에 따라 예산은 달라진다.
+  </p>
+</footer>
+
+</body>
+</html>
