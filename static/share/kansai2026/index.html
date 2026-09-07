@@ -213,6 +213,19 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
 .ok{color:var(--yu);font-weight:600}
 .no{color:var(--kaki);font-weight:600}
 
+/* ── 길찾기 버튼 ──────────────────────────────────────── */
+.dirs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.dir{
+  display:inline-flex;align-items:center;gap:7px;min-height:38px;
+  padding:8px 13px;border-radius:3px;text-decoration:none;
+  background:var(--ai-soft);color:var(--ai);
+  font-size:.82rem;font-weight:500;border:1px solid transparent;
+}
+.dir:hover{border-color:var(--ai)}
+.dir .ic{width:15px;height:15px;stroke-width:1.7}
+.day--yu .dir{background:var(--yu-soft);color:var(--yu)}
+.day--yu .dir:hover{border-color:var(--yu)}
+
 /* ── 사진 ─────────────────────────────────────────────── */
 .ph{display:block;width:100%;object-fit:cover;background:var(--surface-2)}
 .cover-photo{height:clamp(190px,42vw,400px);border-bottom:var(--rule)}
@@ -532,6 +545,43 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
   </div>
 </section>
 
+<!-- ════ 여행 중에 ════ -->
+<section class="wrap">
+  <div class="sec-head">
+    <h2>여행 중엔 이 페이지만</h2>
+    <span class="note">아래 일정마다 길찾기 버튼이 있다 &mdash; 누르면 구글맵이 바로 열린다</span>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-top">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <h4>길찾기는 탭 한 번</h4>
+      </div>
+      <p>이동이 있는 단계마다 <b>파란 버튼</b>이 달려 있다. 누르면 구글맵 앱이 열리면서 <b>지금 시각 기준 실시간 경로</b>가 뜬다. 지도에서 핀 찾을 필요 없다.</p>
+      <p class="menu">기차는 <b>전철</b> 경로, 걸어가는 구간은 <b>도보</b> 경로로 미리 맞춰뒀다</p>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v7c0 4-3 6.4-7 7-4-.6-7-3-7-7V7z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h4>출발 전에 오프라인 지도</h4>
+      </div>
+      <p>구글맵에서 <b>간사이 지역을 미리 받아둔다</b>. 데이터가 끊기거나 지하에서 신호가 약해도 지도와 내 위치는 계속 보인다.</p>
+      <p class="menu">구글맵 → 프로필 → <b>오프라인 지도</b> → 직접 지도 선택</p>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12a1 1 0 0 1 1 1v15l-7-4-7 4V5a1 1 0 0 1 1-1z"/></svg>
+        <h4>숙소 3곳은 저장해두기</h4>
+      </div>
+      <p>구글맵에서 숙소 세 곳을 <b>저장</b>해두면 지도에 별표로 뜬다. 길 잃었을 때 &ldquo;여기서 숙소까지&rdquo;가 바로 나온다.</p>
+      <p class="menu">리스트로 묶어서 가족과 공유하면 셋 다 같은 별표를 본다</p>
+    </div>
+  </div>
+</section>
+
 <!-- ════ 하루하루 ════ -->
 <section class="wrap">
   <div class="sec-head">
@@ -553,6 +603,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">간사이공항 착륙</div>
           <p class="stop-note">입국 심사와 위탁 수하물까지 넉넉히 <b>한 시간</b>. 서둘러도 10시다.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E9%96%A2%E8%A5%BF%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF&destination=%E5%A4%A7%E9%98%AA%E9%A7%85&travelmode=transit" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/></svg><span>공항 → 오사카역</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -575,6 +628,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">호텔에 짐만 맡기고 나오기</div>
           <p class="stop-note">역에서 걸어서 3분. 입실은 3시지만 <b>짐은 지금 맡길 수 있다</b>. 캐리어 없이 하루를 시작한다.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%A4%A7%E9%98%AA%E9%A7%85&destination=%E3%83%9B%E3%83%86%E3%83%AB%E9%98%AA%E6%80%A5%E3%83%AC%E3%82%B9%E3%83%91%E3%82%A4%E3%82%A2%E5%A4%A7%E9%98%AA&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>오사카역 → 호텔</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -588,6 +644,10 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
             <span class="tag">신사이바시 쇼핑</span>
           </div>
           <div class="stop-photo"><img class="ph" src="img/umeda-sky.jpg" alt="우메다 스카이빌딩에서 내려다본 오사카 야경" width="1200" height="675" loading="lazy"></div>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E3%83%9B%E3%83%86%E3%83%AB%E9%98%AA%E6%80%A5%E3%83%AC%E3%82%B9%E3%83%91%E3%82%A4%E3%82%A2%E5%A4%A7%E9%98%AA&destination=%E6%A2%85%E7%94%B0%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%93%E3%83%AB&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>호텔 → 스카이빌딩</span></a>
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E3%83%9B%E3%83%86%E3%83%AB%E9%98%AA%E6%80%A5%E3%83%AC%E3%82%B9%E3%83%91%E3%82%A4%E3%82%A2%E5%A4%A7%E9%98%AA&destination=%E5%A4%A7%E9%98%AA%E5%9F%8E&travelmode=transit" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/></svg><span>호텔 → 오사카성</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -602,6 +662,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">글리코 간판 켜지는 시간</div>
           <p class="stop-note">미도스지선으로 우메다 &rarr; 난바 <b>8분</b>. 해 지고 나면 도톤보리 강변 네온이 본판이다. 저녁은 <b>쿠시카츠</b>.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E3%83%9B%E3%83%86%E3%83%AB%E9%98%AA%E6%80%A5%E3%83%AC%E3%82%B9%E3%83%91%E3%82%A4%E3%82%A2%E5%A4%A7%E9%98%AA&destination=%E9%81%93%E9%A0%93%E5%A0%80&travelmode=transit" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/></svg><span>호텔 → 도톤보리</span></a>
+          </div>
         </div>
       </li>
     </ol>
@@ -628,6 +691,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">체크아웃 &rarr; 신오사카역</div>
           <p class="stop-note">짐 전부 챙겨 나온다. 미도스지선으로 우메다 &rarr; 신오사카 <b>5분</b>이라 서두를 것 없다. 역에서 도시락 사서 타면 좋다.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E3%83%9B%E3%83%86%E3%83%AB%E9%98%AA%E6%80%A5%E3%83%AC%E3%82%B9%E3%83%91%E3%82%A4%E3%82%A2%E5%A4%A7%E9%98%AA&destination=%E6%96%B0%E5%A4%A7%E9%98%AA%E9%A7%85&travelmode=transit" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/></svg><span>호텔 → 신오사카역</span></a>
+          </div>
         </div>
       </li>
       <li class="stop stop--mark">
@@ -635,6 +701,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">특급 코노토리 탑승</div>
           <p class="stop-note">약 <b>2시간 55분</b>. 도시가 사라지고 논밭과 산이 이어지다가 바다 냄새 나는 마을이 나온다.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E6%96%B0%E5%A4%A7%E9%98%AA%E9%A7%85&destination=%E5%9F%8E%E5%B4%8E%E6%B8%A9%E6%B3%89%E9%A7%85&travelmode=transit" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/></svg><span>신오사카 → 기노사키온센</span></a>
+          </div>
         </div>
       </li>
       <li class="stop stop--mark">
@@ -649,6 +718,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">료칸 입실, 유카타로 갈아입기</div>
           <p class="stop-note">여기서는 <b>유카타가 외출복</b>이다. 게타 신고 온천 거리를 걸어다니는 게 이 마을의 방식.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%9F%8E%E5%B4%8E%E6%B8%A9%E6%B3%89%E9%A7%85&destination=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%B1%8A%E5%B2%A1%E5%B8%82%E5%9F%8E%E5%B4%8E%E7%94%BA%E6%A1%83%E5%B3%B61256&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>역 → 오니시야 스이쇼엔</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -657,6 +729,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
           <div class="stop-title">외탕 순례</div>
           <p class="stop-note">일곱 개 공중탕이 마을에 흩어져 있고 <b>숙박객은 전부 무료</b>다. 다만 이 날은 두 곳이 쉰다 &mdash; 아래 표로.</p>
           <div class="tags"><span class="tag tag--warn">10/1은 야나기유·고쇼노유 휴무</span><span class="tag">나머지 5탕 가능</span></div>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%B1%8A%E5%B2%A1%E5%B8%82%E5%9F%8E%E5%B4%8E%E7%94%BA%E6%A1%83%E5%B3%B61256&destination=%E5%9C%B0%E8%94%B5%E6%B9%AF+%E5%9F%8E%E5%B4%8E%E6%B8%A9%E6%B3%89&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>료칸 → 외탕 거리</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -665,6 +740,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
           <div class="stop-title">로프웨이로 마을 내려다보기</div>
           <p class="stop-note">7분이면 산 정상, 중간역에 <b>온센지</b>가 있다. 왕복 어른 &yen;1,200 · 어린이 &yen;600, <b>9:10&ndash;16:50</b>이라 늦으면 못 탄다.</p>
           <div class="tags"><span class="tag tag--pick">10/1은 첫째 목요일이라 정상 운행</span></div>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%B1%8A%E5%B2%A1%E5%B8%82%E5%9F%8E%E5%B4%8E%E7%94%BA%E6%A1%83%E5%B3%B61256&destination=%E5%9F%8E%E5%B4%8E%E6%B8%A9%E6%B3%89%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>료칸 → 로프웨이</span></a>
+          </div>
         </div>
       </li>
       <li class="stop stop--mark">
@@ -714,6 +792,10 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">코노토리 탑승</div>
           <p class="stop-note">약 <b>3시간</b>, 신오사카 <b>14:29</b> 도착. 이 다음 편은 13:29라 두 시간을 더 기다려야 하니 이 편을 놓치지 말 것.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%B1%8A%E5%B2%A1%E5%B8%82%E5%9F%8E%E5%B4%8E%E7%94%BA%E6%A1%83%E5%B3%B61256&destination=%E5%9F%8E%E5%B4%8E%E6%B8%A9%E6%B3%89%E9%A7%85&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>료칸 → 기노사키온센역</span></a>
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%9F%8E%E5%B4%8E%E6%B8%A9%E6%B3%89%E9%A7%85&destination=%E6%96%B0%E5%A4%A7%E9%98%AA%E9%A7%85&travelmode=transit" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/></svg><span>기노사키 → 신오사카</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -721,6 +803,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">신오사카 &rarr; 닛폰바시</div>
           <p class="stop-note">미도스지선으로 난바까지 <b>12분</b>, 거기서 닛폰바시는 코앞이다.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E6%96%B0%E5%A4%A7%E9%98%AA%E9%A7%85&destination=%E6%97%A5%E6%9C%AC%E6%A9%8B%E9%A7%85+%E5%A4%A7%E9%98%AA&travelmode=transit" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/></svg><span>신오사카 → 닛폰바시</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -729,6 +814,10 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
           <div class="stop-title">숙소에 짐 맡기고 구로몬시장</div>
           <p class="stop-note">시장이 <b>닛폰바시역 바로 옆</b>이다. 입실 시간까지 여기서 군것질하며 기다리면 딱 맞다.</p>
           <div class="stop-photo"><img class="ph" src="img/kuromon.jpg" alt="구로몬시장의 가게 앞" width="1200" height="1200" loading="lazy"></div>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E6%97%A5%E6%9C%AC%E6%A9%8B%E9%A7%85+%E5%A4%A7%E9%98%AA&destination=%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B5%AA%E9%80%9F%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B3-1-17&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>닛폰바시역 → 숙소</span></a>
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B5%AA%E9%80%9F%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B3-1-17&destination=%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>숙소 → 구로몬시장</span></a>
+          </div>
         </div>
       </li>
       <li class="stop stop--mark">
@@ -743,6 +832,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">도톤보리 &middot; 난바</div>
           <p class="stop-note">숙소에서 걸어서 10분 남짓. 첫날 못 먹은 걸 오늘 먹으면 된다.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B5%AA%E9%80%9F%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B3-1-17&destination=%E9%81%93%E9%A0%93%E5%A0%80&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>숙소 → 도톤보리</span></a>
+          </div>
         </div>
       </li>
     </ol>
@@ -769,6 +861,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">구로몬시장에서 아침</div>
           <p class="stop-note">구운 해산물, 튀김, 과일. 서서 조금씩 사 먹는 게 여기 방식이다.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B5%AA%E9%80%9F%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B3-1-17&destination=%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>숙소 → 구로몬시장</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -776,6 +871,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
         <div class="stop-body">
           <div class="stop-title">마지막 쇼핑</div>
           <p class="stop-note">신사이바시스지 상점가가 걸어서 닿는다. 남은 엔화 털기 좋은 곳.</p>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B5%AA%E9%80%9F%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B3-1-17&destination=%E5%BF%83%E6%96%8E%E6%A9%8B%E7%AD%8B%E5%95%86%E5%BA%97%E8%A1%97&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>숙소 → 신사이바시스지</span></a>
+          </div>
         </div>
       </li>
       <li class="stop stop--mark">
@@ -784,6 +882,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
           <div class="stop-title">짐 찾아서 난카이 난바역으로</div>
           <p class="stop-note">숙소에서 걸어서 <b>10분쯤</b>. <b>오늘 지켜야 할 시각은 이것 하나다.</b></p>
           <div class="tags"><span class="tag tag--warn">12:30 넘기지 말 것</span></div>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B5%AA%E9%80%9F%E5%8C%BA%E6%97%A5%E6%9C%AC%E6%A9%8B3-1-17&destination=%E5%8D%97%E6%B5%B7%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85&travelmode=walking" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M11 21l2-6-3-2.5V8l4-1.5 2.5 3.5 2.5 1M10 21l-1.5-4"/></svg><span>숙소 → 난카이 난바역</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -792,6 +893,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
           <div class="stop-title">라피트 승차</div>
           <p class="stop-note">약 <b>38분</b>, &yen;1,490. 지정석이라 캐리어 들고 서 있을 일이 없다. 급행이면 &yen;970에 45분.</p>
           <div class="tags"><span class="tag">JR 패스는 여기 안 먹힌다 &mdash; 따로 결제</span></div>
+          <div class="dirs">
+            <a class="dir" href="https://www.google.com/maps/dir/?api=1&origin=%E5%8D%97%E6%B5%B7%E3%81%AA%E3%82%93%E3%81%B0%E9%A7%85&destination=%E9%96%A2%E8%A5%BF%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF&travelmode=transit" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M8 16v2M16 16v2"/></svg><span>난바 → 간사이공항</span></a>
+          </div>
         </div>
       </li>
       <li class="stop">
@@ -971,7 +1075,9 @@ tr.total td{border-top:2px solid var(--line);font-weight:600;background:var(--su
     <li><span class="box"></span><div><div class="t">오니시야 스이쇼엔 역 픽업 문의</div><div class="s">료칸이 역 북쪽이라 캐리어 세 개면 셔틀이 있는지 물어두는 게 낫다</div></div></li>
     <li><span class="box"></span><div><div class="t">여권 3장 · 여행자보험</div><div class="s">여권 유효기간 6개월 이상 남았는지</div></div></li>
     <li><span class="box"></span><div><div class="t">숙소 3곳 예약 확인서</div><div class="s">인쇄하거나 캡처해두기 &mdash; 현지에서 인터넷이 안 될 때 대비</div></div></li>
-    <li><span class="box"></span><div><div class="t">eSIM 또는 포켓와이파이</div><div class="s">셋이 쓰면 각자 eSIM이 편하다</div></div></li>
+    <li><span class="box"></span><div><div class="t">통신 &mdash; eSIM이 무난</div><div class="s">유심을 갈아끼우면 한국 번호로 오는 인증문자를 못 받는다. 숙소 셀프체크인·항공 체크인에 문자가 올 수 있으니 최소 한 명은 한국 번호를 살려둘 것. 딸 폰이 eSIM 되는지 확인</div></div></li>
+    <li><span class="box"></span><div><div class="t">구글맵 오프라인 지도 받아두기</div><div class="s">간사이 지역 · 출발 전에 · 데이터 끊겨도 지도와 위치는 보인다</div></div></li>
+    <li><span class="box"></span><div><div class="t">숙소 3곳 구글맵에 저장</div><div class="s">리스트로 묶어 가족과 공유 &mdash; 길 잃었을 때 바로 찾아간다</div></div></li>
     <li><span class="box"></span><div><div class="t">엔화 현금 · ICOCA</div><div class="s">외탕·시장·작은 가게는 현금 · ICOCA는 공항에서 사서 충전</div></div></li>
     <li><span class="box"></span><div><div class="t">돼지코(변환 플러그)</div><div class="s">일본은 A타입 · 멀티탭 하나 있으면 셋이 같이 충전</div></div></li>
     <li><span class="box"></span><div><div class="t">캐리어 크기 점검</div><div class="s">기노사키 골목이 좁다 · 특급 짐칸이나 코인락커 활용</div></div></li>
