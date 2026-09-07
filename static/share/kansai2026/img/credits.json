@@ -62,42 +62,6 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tajima_Beef_(21926180356).jpg",
   "bytes": 146696
  },
- "kiyomizu": {
-  "file": "img/kiyomizu.jpg",
-  "title": "Kiyomizu-dera, Kyoto, November 2016 -01.jpg",
-  "author": "Martin Falbisoner",
-  "lic": "CC BY-SA 4.0",
-  "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Kiyomizu-dera,_Kyoto,_November_2016_-01.jpg",
-  "bytes": 401054
- },
- "fushimi": {
-  "file": "img/fushimi.jpg",
-  "title": "20181110 Fushimi Inari Torii 12.jpg",
-  "author": "Balon Greyjoy",
-  "lic": "CC0",
-  "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "page": "https://commons.wikimedia.org/wiki/File:20181110_Fushimi_Inari_Torii_12.jpg",
-  "bytes": 548377
- },
- "nishiki": {
-  "file": "img/nishiki.jpg",
-  "title": "Grilled squid served at Nishiki market, Kyoto, Japan.jpg",
-  "author": "Joli Rumi",
-  "lic": "CC BY-SA 4.0",
-  "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Grilled_squid_served_at_Nishiki_market,_Kyoto,_Japan.jpg",
-  "bytes": 222537
- },
- "gion": {
-  "file": "img/gion.jpg",
-  "title": "Streets of Gion, Kyoto - Gion7709.jpg",
-  "author": "lumoplank",
-  "lic": "CC0",
-  "licurl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "page": "https://commons.wikimedia.org/wiki/File:Streets_of_Gion,_Kyoto_-_Gion7709.jpg",
-  "bytes": 323461
- },
  "osaka-castle": {
   "file": "img/osaka-castle.jpg",
   "title": "Osaka castle 7.jpg",
@@ -115,5 +79,21 @@
   "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Kinosaki-Onsen_Station_Sign_and_Limited_Express_%22Konotori%22.jpg",
   "bytes": 231301
+ },
+ "kuromon": {
+  "file": "img/kuromon.jpg",
+  "title": "Kuromon-ichiba in 201408.JPG",
+  "author": "Mc681",
+  "lic": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kuromon-ichiba_in_201408.JPG",
+  "bytes": 404458
+ },
+ "umeda-sky": {
+  "file": "img/umeda-sky.jpg",
+  "title": "Night view from Umeda Sky Building (south side) 20250830.jpg",
+  "author": "掬茶",
+  "lic": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Night_view_from_Umeda_Sky_Building_(south_side)_20250830.jpg",
+  "bytes": 264856
  }
 }
